@@ -1,0 +1,29 @@
+.introduction
+{
+    font-family: 'Lora';
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.buttons
+{
+    color:black;
+    font-size: 200%;
+}
+
+.buttons:hover
+{
+    color:red;
+}
+
+.buttons:active
+{
+    color:darkred;
+}
+
+.buttons_white
+{
+    background-image: "Rectangle148.png";
+    color:white;
+}
