@@ -6,24 +6,18 @@
     font-size: 20px;
 }
 
-.buttons
+.text_button
 {
     color:black;
     font-size: 200%;
 }
 
-.buttons:hover
+.text_button:hover
 {
     color:red;
 }
 
-.buttons:active
+.text_button:active
 {
     color:darkred;
-}
-
-.buttons_white
-{
-    background-image: "Rectangle148.png";
-    color:white;
 }
