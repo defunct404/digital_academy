@@ -76,11 +76,7 @@ body
     transition: color 0.2s;
 }
 
-.page-header__nav-link:hover
-{
-    color: #BC3324;
-}
-
+.page-header__nav-link:hover,
 .page-header__nav-link:active
 {
     color: #BC3324;
@@ -157,6 +153,26 @@ body
     max-width: 405px;
     min-width: 280px;
     width: calc(33.333% - 60px);
+}
+
+.events-card__title
+{
+    width: 405px;
+    height: 64px;
+    left: 0px;
+    top: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #1F1E1E;
+}
+
+.events-card__title:hover,
+.events-card__title:active
+{
+    color: #BC3324;
 }
 
 .events-card__link
