@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
+<!-- <html lang="ru" class="show-event-popup"> -->
+    @@include('blocks/event-pp.html')
 
-  @@include('blocks/head.html')
+    @@include('blocks/head.html')
 
-  <body class="body">
-    
-    @@include('blocks/page-header.html')
+    <body class="body">
 
-    <main class="main">
+        @@include('blocks/page-header.html')
 
-    </main>
+        <main>
 
-    <footer class="page-footer">
-      
-    </footer>
+            @@include('blocks/section-main.html')
 
-  </body>
+            @@include('blocks/blog-listing.html')
 
+        </main>
+
+        @@include('blocks/page-footer.html')
+
+    </body>
 </html>

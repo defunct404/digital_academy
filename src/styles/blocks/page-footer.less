@@ -1,0 +1,250 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 1334px;
+  width: 100%;
+  padding-bottom: 72px;
+}
+
+.footer-block-with-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+
+  svg:first-child {
+    margin-right: 49px;
+  }
+
+  svg:last-child {
+    margin-left: 49px;
+  }
+}
+
+.footer-block-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid @red;
+}
+
+.footer-link {
+  padding: 0 0 22px 22px;
+  font-weight: 600;
+
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    color: @red-hover;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.footer-feedback {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: flex-start;
+
+  p {
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+.footer-block-with-input {
+  display: flex;
+  margin-top: 24px;
+}
+
+.footer-feedback-input {
+  width: 275px;
+  padding: 15px 0px 15px 28px;
+  border-radius: 0;
+  border: none;
+
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.1875rem /* 19px */;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.footer-block-with-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+
+  p {
+    margin-left: 15px;
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.1875rem /* 19px */;
+    font-weight: 300;
+  }
+
+  label {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    margin-left: -6px;
+
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.1875rem /* 19px */;
+    font-weight: 300;
+
+    cursor: pointer;
+  }
+
+  input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.footer-block-with-checkbox label > span {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+  border: 2px solid @black;
+  border-radius: 0;
+  transition: all 0.3s;
+}
+
+.footer-block-with-checkbox input:checked + label > span {
+  border: 10px solid @black;
+  animation: bounce 250ms;
+}
+
+.footer-block-with-checkbox input:checked + label > span::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 4px;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transform: rotate(45deg);
+  transform-origin: 0% 100%;
+  animation: checked-box 125ms 250ms forwards;
+}
+
+@keyframes checked-box {
+  0% {
+    width: 0;
+    height: 0;
+    border-color: white;
+    transform: translate(0, 0) rotate(45deg);
+  }
+  33% {
+    width: 4px;
+    height: 0;
+    border-color: white;
+    transform: translate(0, 0) rotate(45deg);
+  }
+  100% {
+    width: 4px;
+    height: 8px;
+    border-color: white;
+    transform: translate(0, -8px) rotate(45deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.footer-block-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 100px;
+}
+
+.footer-block-2-left {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-block-with-links {
+  display: flex;
+  align-items: center;
+  margin-right: 8%;
+
+  a {
+    font-weight: 600;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  a:first-child {
+    margin-right: 60px;
+  }
+}
+
+.footer-block-with-creator {
+  display: flex;
+  align-items: center;
+
+  p {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p:first-child {
+    margin-right: 15px;
+  }
+
+  a {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 44px;
+
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

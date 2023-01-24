@@ -1,0 +1,106 @@
+.pp {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 90px 95px 50px;
+  background-color: rgba(28, 27, 27, 0.4);
+  backdrop-filter: blur(50px);
+  overflow-y: auto;
+  z-index: 110;
+  display: none;
+  &__wrapper {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1210px;
+    margin: auto;
+    background-color: @gray-bg;
+    background-image: url("../../assets/images/noise.png");
+    background-position: 0 0;
+    background-size: auto;
+    background-repeat: repeat;
+  }
+  &__container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+  }
+
+  &__sticky-close {
+    position: sticky;
+    top: 0;
+    align-self: flex-end;
+    width: 0;
+    height: 0;
+  }
+  &__x-btn {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    svg {
+      color: @black;
+
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 400ms;
+    }
+
+    svg:hover,
+    svg:active {
+      color: @red;
+      cursor: pointer;
+    }
+  }
+  &__title {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin: -40px 0 70px -85px;
+    padding: 10px 85px;
+    width: 595px;
+    min-height: 80px;
+    background-color: @black;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: @font-Lora;
+    font-size: 22px;
+    line-height: 1.36;
+    color: #fff;
+    letter-spacing: 0.02em;
+    z-index: 1;
+  }
+
+  &__form,
+  .form {
+    input,
+    textarea {
+      &::placeholder {
+        color: #6c6c6c;
+      }
+    }
+    input:focus,
+    textarea:focus {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+}
+
+@supports (backdrop-filter: blur(50px)) {
+  .pp {
+    background-color: rgba(28, 27, 27, 0.4);
+    backdrop-filter: blur(50px);
+  }
+}

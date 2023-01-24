@@ -1,0 +1,47 @@
+.blog {
+  max-width: 1414px;
+  width: 100%;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin: 0 auto;
+
+  .blog_listing,
+  .listing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .listing__section-title,
+    .section-title {
+      width: 624px;
+      padding: 8px 0px;
+      margin-bottom: 150px;
+      font-family: @font-Lora;
+      font-weight: 500;
+      font-size: 2.25rem;
+      line-height: 2.875rem;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: @black;
+      color: white;
+    }
+
+    .listing__blog-cards {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -30px;
+    }
+
+    .listing__blog,
+    .link {
+        margin: 70px 0px;
+        align-self: flex-end;
+
+        &:active,
+        &:hover {
+            color: @red-hover;
+            cursor: pointer;
+        }
+    }
+  }
+}

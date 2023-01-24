@@ -1,77 +1,55 @@
-html, body
-{
-    margin: 0;
-    padding: 0;
-    width: 100%;
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: @font-Open;
+  font-size: 1rem /*16px*/;
+
 }
 
-body
-{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding-top: 147px;
-    background-color: #dedede;
-    background-image: url(../../assets/images/noise.png);
-    background-position: 0 0, 0 0;
-    background-size: auto, 100% auto;
-    background-repeat: repeat, repeat-y;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.3;
-    color: #1F1E1E;
-    overflow-x: hidden;
+body {
+  min-height: 100vh;
+  padding-top: 147px;
+  color: #1f1e1e;
+  font-size: 1rem /*16px*/;
+  line-height: 1.375rem /*22px*/;
+
+  background-image: url("../../assets/images/noise.png"), url("../../assets/images/bg.png");
+  background-position: 0 0;
+  background-repeat: repeat, repeat-y;
+  background-size: auto, 100% auto;
 }
 
-.main
-{
-    flex: 1 0 auto;
-   // background-color: white;
+* {
+  box-sizing: border-box;
 }
 
-.page-footer
-{
-    flex: 0 0 auto;
-    //background-color: black;
-}
-
-
-
-a
-{
-    color: @black;
-    outline: none;
-    text-decoration: none;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 input,
 textarea,
-select
-{
-    box-shadow: none;
-    outline: none;
-    color: @black;
-    font-family: @font1;
+select {
+  box-shadow: none;
+  outline: none;
+  color: @black;
+  font-family: @font-Open;
 }
 
-textarea
-{
-    resize: none;
+textarea {
+  resize: none;
 }
 
-input,
-textarea
-{
-    &::placeholder 
-    {
-        color: @grey3;
-        transition: 0.2s;
-    }
-    &:focus
-    {
-        &::placeholder{color:transparent;}
-    }
-
+.main {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  max-width: 1414px;
+  width: 100%;
+  height: 100%;
 }
