@@ -15,7 +15,7 @@ import rename from "gulp-rename"
 import terser from "gulp-terser"
 
 import imagemin from "gulp-imagemin"
-import imagemin_giftsicle from "imagemin-gifsicle"
+import imagemin_gifsicle from "imagemin-gifsicle"
 import imagemin_mozjpeg from "imagemin-mozjpeg"
 import imagemin_optipng from "imagemin-optipng"
 
@@ -124,7 +124,7 @@ function images() {
     .src(resources.images)
     .pipe(
         imagemin([
-            imagemin_giftsicle({ interlaced: true }),
+            imagemin_gifsicle({ interlaced: true }),
             imagemin_mozjpeg({ quality: 100, progressive: true }),
             imagemin_optipng({ optimizationLevel: 3 })
         ])
