@@ -1,0 +1,47 @@
+.page-event {
+    .page-footer__container {
+        &::before {
+            left: 40px;
+
+            @media @bw1660 {
+                left: 38px;
+            }
+
+            @media @bw1340 {
+                left: 32px;
+            }
+
+            @media @bw768 {
+                left: 1px;
+            }
+        }
+
+        &::after {
+            right: 41px;
+
+            @media @bw1660 {
+                right: 39px;
+            }
+
+            @media @bw1340 {
+                right: 32px;
+            }
+
+            @media @bw768 {
+                right: 14px;
+            }
+        }
+    }
+
+    .subscription__title {
+        font-weight: 400;
+
+        @media @bw1660 {
+            letter-spacing: 0.35px;
+        }
+
+        @media @bw768 {
+            margin-left: 0;
+        }
+    }
+}

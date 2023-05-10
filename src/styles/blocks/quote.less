@@ -1,0 +1,53 @@
+.quote {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 305px;
+    overflow: hidden;
+
+    @media @bw1660 {
+        min-height: 216px;
+    }
+
+    @media @bw1340 {
+        min-height: 192px;
+    }
+
+    @media @bw768 {
+        min-height: 96px;
+    }
+
+    &__text {
+        position: relative;
+        left: -4.2%;
+        width: 116%;
+        margin: 0;
+        font-family: @font3;
+        font-weight: 700;
+        font-size: 8em;
+        line-height: 1.2;
+        text-align: right;
+
+        @media @bw1660 {
+            left: -4.7%;
+            font-size: 5.625rem;
+        }
+
+        @media @bw1340 {
+            font-size: 5rem;
+            line-height: 1.4;
+        }
+
+        @media @bw768 {
+            font-size: 2.5rem;
+        }
+
+        @media @bw600 {
+            width: 123%;
+        }
+
+        &::first-line {
+            text-align: left;
+        }
+    }
+}

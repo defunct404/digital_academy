@@ -1,0 +1,167 @@
+.home {
+  padding: 100px 0;
+
+  @media @bw1660 {
+    .section-title {
+      max-width: 604px;
+    }
+  }
+
+  @media @bw1340 {
+    padding: 80px 0 95px 0;
+
+    .section-title {
+      max-width: 566px;
+    }
+  }
+
+  @media @bw768 {
+    padding-bottom: 98px;
+
+    .section-title {
+      max-width: 280px;
+    }
+  }
+
+  &__choice {
+    margin-bottom: 175px;
+
+    @media @bw1340 {
+      margin-bottom: 105px;
+    }
+
+    @media @bw768 {
+      margin-bottom: 74px;
+    }
+  }
+
+  &__about-us {
+    margin-bottom: 90px;
+
+    @media @bw1660 {
+      margin-bottom: 100px;
+    }
+
+    @media @bw1340 {
+      margin-bottom: 50px;
+    }
+
+    @media @bw768 {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__events {
+    z-index: 10;
+    max-width: 100%;
+    margin-bottom: 65px;
+    padding: 120px 0 100px;
+
+    @media @bw1660 {
+      margin-bottom: 71px;
+      padding: 100px 0 92px;
+    }
+
+    @media @bw1340 {
+      margin-bottom: 35px;
+      padding: 80px 0 58px;
+    }
+
+    @media @bw768 {
+      margin-bottom: 41px;
+      padding: 38px 0 54px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      display: block;
+      min-width: 100%;
+      height: 100%;
+      background: url("../../assets/images/events/events-background.svg") no-repeat;
+      background-size: cover;
+      background-position-x: 50%;
+
+      @media @bw1340 {
+        background: url("../../assets/images/events/events-background-1340w.svg") no-repeat;
+        background-size: cover;
+        background-position-x: 50%;
+      }
+
+      @media @bw768 {
+        background: url("../../assets/images/events/events-background-768w.svg") no-repeat;
+        background-size: cover;
+        background-position-x: 50%;
+      }
+    }
+
+    .listing__event-card {
+      margin-bottom: 70px;
+
+      @media @bw768 {
+        margin-bottom: 60px;
+      }
+    }
+
+    .event-card__title {
+      @media @bw1340 {
+        min-height: 55px;
+        font-size: 1rem;
+        line-height: 1.35;
+      }
+
+      @media @bw768 {
+        min-height: 51px
+      }
+    }
+
+    .event-card__description {
+      @media @bw1340 {
+        font-size: 0.875rem;
+        line-height: 1.357;
+      }
+    }
+
+    .event-card__time {
+      @media @bw1340 {
+        margin: 7px 0 0;
+      }
+    }
+  }
+
+  &__listing {
+    margin-bottom: 92px;
+
+    @media @bw1660 {
+      margin-bottom: 105px;
+    }
+
+    @media @bw1340 {
+      margin-bottom: 73px;
+    }
+
+    @media @bw768 {
+      margin-bottom: 75px;
+    }
+  }
+
+  &__contacts {
+    margin-bottom: 150px;
+
+    @media @bw1660 {
+      margin-bottom: 130px;
+    }
+
+    @media @bw1340 {
+      margin-bottom: 86px;
+    }
+
+    @media @bw768 {
+      margin-bottom: 99px;
+    }
+  }
+}

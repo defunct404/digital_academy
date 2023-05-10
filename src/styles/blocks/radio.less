@@ -4,16 +4,21 @@
   align-items: flex-start;
 
   &__item {
-    box-sizing: border-box;
     position: relative;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 15px;
     min-height: 23px;
-    padding-left: 23px;
+    margin-bottom: 21px;
+    padding-left: 29px;
     color: @black;
     cursor: pointer;
+
+    @media @bw1660 {
+      margin-bottom: 15px;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -23,33 +28,37 @@
     .is-hidden;
 
     &:checked {
-      & ~ .radio__mark {
+      &~.radio__mark {
         background-color: @black;
       }
+    }
+
+    &~span.error {
+      order: 1;
+      margin-left: 15px;
     }
   }
 
   &__mark {
+    position: absolute;
+    left: 2px;
+    top: 0;
     box-sizing: border-box;
     display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 23px;
     height: 23px;
+    padding: 3px;
     border: 2px solid @black;
     border-radius: 50%;
-    padding: 3px;
-
     background-clip: content-box;
     background-color: transparent;
-    transition: background-color 400ms;
+    transition: background-color 0.2s;
   }
 
   &__label {
     margin-left: 20px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 1rem;
+    line-height: 1.4;
   }
 }

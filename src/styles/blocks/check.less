@@ -1,0 +1,115 @@
+.check {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 24px;
+    padding-left: 24px;
+    color: @black;
+    cursor: pointer;
+
+    &__input {
+        .is-hidden();
+
+        &:checked {
+            &~.check__mark {
+                background-color: @black;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 7px;
+                    top: 2px;
+                    display: block;
+                    width: 6px;
+                    height: 12px;
+                    border-bottom: 2px solid @white;
+                    border-right: 2px solid @white;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    &__mark {
+        position: absolute;
+        left: 0;
+        top: 0;
+        box-sizing: border-box;
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: 1px solid @black;
+    }
+
+    &__label {
+        margin-left: 15px;
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.5;
+
+        @media @bw768 {
+            font-size: 0.875rem;
+            line-height: 1.7;
+        }
+
+        &--s {
+            font-weight: 400;
+            font-size: 0.875rem;
+            line-height: 1.72;
+
+            @media @bw1340 {
+                margin-left: 18px;
+                line-height: 1.5;
+            }
+
+            @media @bw768 {
+                line-height: 1.4;
+            }
+        }
+
+        &--fs14 {
+            font-weight: 300;
+            font-size: 0.875em;
+            letter-spacing: -0.3px;
+            line-height: 1.8;
+
+            @media @bw1340 {
+                line-height: 1.8;
+            }
+
+            @media @bw768 {
+                font-size: 0.75rem;
+                line-height: 1.375;
+                font-weight: 400;
+                letter-spacing: normal;
+            }
+        }
+    }
+
+    &--red {
+        color: @red;
+
+        .check__mark {
+            border-color: @red;
+        }
+
+        .check__input {
+            &:checked {
+                &~.check__mark {
+                    background-color: @red;
+                }
+
+                &~.check__label {
+                    color: @red;
+                }
+            }
+        }
+    }
+
+    &--disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}

@@ -1,72 +1,154 @@
 .field {
-  display: flex;
-  flex-direction: column;
-
-  &__title {
-    display: block;
-    margin: 0 0 10px;
-    color: @black;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 25px;
-  }
-
-  &__label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-    line-height: 1.3;
-    color: @black;
-  }
-
-  &__input,
-  &__textarea,
-  &__select {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    background-color: #fff;
-    font-size: 16px;
-    line-height: 1.375;
-  }
-
-  &__input,
-  &__select {
-    height: 55px;
-    padding: 0 20px;
-  }
-
-  &__textarea {
-    height: 150px;
-    padding: 20px;
-  }
-
-  &__date-inputs {
     display: flex;
-    width: 100%;
-	max-width: 251px;
-    height: 55px;
-  }
+    flex-direction: column;
 
-  &__date-input {
-    box-sizing: border-box;
-    display: block;
-    width: 55px;
-    height: 55px;
-    margin-right: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #fff;
-    padding: 0 5px;
-    font-size: 16px;
-    line-height: 1.375;
-    text-align: center;
-
-    &--year {
-      flex-grow: 1;
-      margin-right: 0;
+    &__input,
+    &__textarea,
+    &__select {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        background-color: @white;
+        font-size: 1rem;
+        line-height: 1.375;
     }
-  }
+
+    &__input,
+    &__select {
+        max-width: 405px;
+        height: 55px;
+        padding: 0 20px;
+
+        @media @bw768 {
+            max-width: 100%;
+        }
+    }
+
+    &__select {
+        appearance: none;
+    }
+
+    &__container {
+        position: relative;
+        padding-bottom: 28px;
+
+        @media @bw1340 {
+            padding-bottom: 29px;
+        }
+    }
+
+    &__textarea {
+        height: 150px;
+        padding: 20px;
+
+        @media @bw768 {
+            height: 234px;
+        }
+    }
+
+    &__title {
+        display: block;
+        margin: 0 0 17px;
+        color: @black;
+        font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 1.38;
+
+        @media @bw1660 {
+            margin: 0 0 10px;
+        }
+
+        @media @bw768 {
+            font-size: 1rem;
+            line-height: 1.36;
+        }
+
+        &--fs18 {
+            @media @bw768 {
+                font-size: 18px;
+            }
+        }
+
+        &--mb20 {
+            @media @bw768 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__label {
+        position: relative;
+        display: block;
+        margin-bottom: 9px;
+        font-size: 1rem;
+        line-height: 1.3;
+        color: @black;
+
+        @media @bw1660 {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__date-inputs {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 55px;
+        pointer-events: none;
+    }
+
+    &__date-input {
+        box-sizing: border-box;
+        display: block;
+        width: 55px;
+        height: 55px;
+        margin-right: 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: @white;
+        padding: 0 5px;
+        font-size: 1rem;
+        line-height: 1.375;
+        text-align: center;
+        pointer-events: none;
+
+        @media @bw400 {
+            font-size: 14px;
+        }
+
+        &--year {
+            flex-grow: 1;
+            margin-right: 0;
+        }
+    }
+
+    &__radio {
+        @media @bw768 {
+            padding-bottom: 25px;
+        }
+    }
+
+    &__date {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    &__date-picker {
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        max-width: 250px;
+        height: 55px;
+        border: none;
+        border-radius: 5px;
+        opacity: 0;
+        cursor: pointer;
+    }
 }

@@ -1,41 +1,58 @@
-<section class="blog">
-    <div class="blog__listing listing">
-      <h2 class="listing__section-title section-title">Блог</h2>
-      <div class="listing__blog-cards"> 
-        <!-- prettier-ignore -->
-        @@loop('blog-card.html', [
-                    {
-                        "class" : "",
-                        "link" : "/",
-                        "img" : "assets/images/blog/theatre.png",
-                        "alt" : "Theatre Photosession",
-                        "title" : "Фотосессия в стенах Театра драмы",
-                        "description" : "Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было",
-                        "time" : "26.11.2022",
-                        "datetime" : "2022-11-26T00:00"
-                    },
-                    {
-                        "class" : "",
-                        "link" : "/",
-                        "img" : "assets/images/blog/vr.png",
-                        "alt" : "vr",
-                        "title" : "Выставка VR в Томске",
-                        "description" : "Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.",
-                        "time" : "05.11.2022",
-                        "datetime" : "2022-11-05T00:00"
-                    },
-                    {
-                        "class" : "",
-                        "link" : "/",
-                        "img" : "assets/images/blog/rockingRadio.png",
-                        "alt" : "rocking radio",
-                        "title" : "Rocking radio в заброшенном ангаре",
-                        "description" : "15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.",
-                        "time" : "01.11.2022",
-                        "datetime" : "2022-11-01T00:00"
-                    }
-        ])
-      </div>
-      <a href="#" class="listing__blog link">Смотреть все</a>
-    </div>
-  </section>
+<section class="listing @@class">
+  <h2 class="listing__title section-title">Блог</h2>
+
+  <div class="listing__article-list">
+    <!-- prettier-ignore -->
+    @@loop('article-card.html', [
+    {
+      "class": "listing__article-card",
+      "img": "assets/images/blog/theatre.jpg",
+      "img-2x": "assets/images/blog/theatre@2x.jpg",
+      "img-webp": "assets/images/blog/theatre.webp",
+      "img-webp-2x": "assets/images/blog/theatre@2x.webp",
+      "img-tablet": "assets/images/blog/theatre_768.jpg",
+      "img-tablet-2x": "assets/images/blog/theatre_768@2x.jpg",
+      "img-tablet-webp": "assets/images/blog/theatre_768.webp",
+      "img-tablet-webp-2x": "assets/images/blog/theatre_768@2x.webp",
+      "alt": "Theatre Photosession",
+      "title": "Фотосессия в стенах Театра драмы",
+      "descr": "Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было ",
+      "time": "26.11.2022",
+      "datetime": "2022-11-26T00:00"
+    },
+    {
+      "class": "listing__article-card",
+      "img": "assets/images/blog/vr.jpg",
+      "img-2x": "assets/images/blog/vr@2x.jpg",
+      "img-webp": "assets/images/blog/vr.webp",
+      "img-webp-2x": "assets/images/blog/vr@2x.webp",
+      "img-tablet": "assets/images/blog/vr_768.jpg",
+      "img-tablet-2x": "assets/images/blog/vr_768@2x.jpg",
+      "img-tablet-webp": "assets/images/blog/vr_768.webp",
+      "img-tablet-webp-2x": "assets/images/blog/vr_768@2x.webp",
+      "alt": "Выставка VR в Томске",
+      "title": "Выставка VR в Томске",
+      "descr": "Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.",
+      "time": "05.11.2022",
+      "datetime": "2022-11-05T00:00"
+    },
+    {
+      "class": "listing__article-card",
+      "img": "assets/images/blog/rocking-radio.jpg",
+      "img-2x": "assets/images/blog/rocking-radio@2x.jpg",
+      "img-webp": "assets/images/blog/rocking-radio.webp",
+      "img-webp-2x": "assets/images/blog/rocking-radio@2x.webp",
+      "img-tablet": "assets/images/blog/rocking-radio_768.jpg",
+      "img-tablet-2x": "assets/images/blog/rocking-radio_768@2x.jpg",
+      "img-tablet-webp": "assets/images/blog/rocking-radio_768.webp",
+      "img-tablet-webp-2x": "assets/images/blog/rocking-radio_768@2x.webp",
+      "alt": "Rocking radio в заброшенном ангаре",
+      "title": "Rocking radio в заброшенном ангаре",
+      "descr": "15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.",
+      "time": "01.11.2022",
+      "datetime": "2022-11-01T00:00"
+    }
+    ])
+  </div>
+  <a href="#" class="listing__link listing__link--pt85 link">Смотреть все</a>
+</section>

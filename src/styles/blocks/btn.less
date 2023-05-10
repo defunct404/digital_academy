@@ -1,25 +1,63 @@
-.btn
-{
+.btn {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
     padding: 15px 40px;
-    border: 1px solid #1F1E1E;
+    border: 1px solid @black;
+    overflow: hidden;
     background-color: transparent;
-    text-decoration: none;
     outline: none;
+    color: @black;
+    font-family: @font1;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 1.3;
+    font-size: @font1_size;
+    line-height: 20px;
     text-align: center;
-    color: #1F1E1E;
-    transition: color 0.2s, background-color 0.2s;
+    text-decoration: none;
+    -webkit-transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    -o-transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
-    &:hover,
-    &:active
-{
-    color:white;
-    background-color: #1F1E1E;
-}
+    cursor: pointer;
+
+    @media @bw1660 {
+        padding: 15px 39px; // если помешает - перенести в choice
+    }
+
+    @media @bw768 {
+        padding: 14px 39px; // choice
+        font-size: 0.875rem;
+        line-height: 1.36;
+    }
+
+    &:hover {
+        @media (hover: hover) {
+            background-color: @black;
+            color: @white;
+        }
+    }
+
+    &:active {
+        background-color: @black;
+        color: @white;
+    }
+
+    &--red {
+        border-color: @red;
+        background-color: @red;
+        color: @white;
+        transition: background-color 0.2s, border-color 0.2s;
+
+        &:hover {
+            @media (hover: hover) {
+                background-color: @red_dark;
+                border-color: @red_dark;
+            }
+        }
+
+        &:active {
+            background-color: @red_dark;
+            border-color: @red_dark;
+        }
+    }
 }

@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html lang="ru">
 <!-- <html lang="ru" class="show-event-popup"> -->
-    @@include('blocks/event-pp.html')
-
+<html lang="ru">
     @@include('blocks/head.html')
 
-    <body class="body">
+<body class="body">
+    @@include('blocks/page-header.html')
+    <main class="page-main">
 
-        @@include('blocks/page-header.html')
+        <div class="home">
+            @@include('blocks/promo.html', {"class": "home__promo"})
+            @@include('blocks/block-choice.html', {"class": "home__choice"})
+            @@include('blocks/about-us.html', {"class": "home__about-us"})
+            @@include('blocks/event-swiper.html', {"class": "home__events"})
+            @@include('blocks/blog-listing.html', {"class": "home__listing"})
+            @@include('blocks/contacts.html', {"class": "home__contacts"})
+            @@include('blocks/quote.html', {"class": "home__quote"})
+        </div>
+    </main>
+    @@include('blocks/page-footer.html', {"class": "page-index"})
+    @@include('blocks/event-pp.html')
 
-        <main>
+    <script src="./scripts/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/jquery.selectric.min.js"></script>
+    <script src="./scripts/air-datapicker.js"></script>
+    <script src="./scripts/jquery.mask.min.js"></script>
+    <script src="./scripts/jquery.validate.js"></script>
+    <script src="./scripts/jquery.validate-init.js"></script>
+    <script src="./scripts/swiper-bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+    <script src="./scripts/main.js"></script>
+</body>
 
-            @@include('blocks/section-main.html')
-
-            @@include('blocks/blog-listing.html')
-
-        </main>
-
-        @@include('blocks/page-footer.html')
-
-    </body>
 </html>

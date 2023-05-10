@@ -1,0 +1,29 @@
+<section class="event-promo @@class">
+    <h2 class="event-promo__title">@@title</h2>
+    <div class="event-promo__info-block">
+        <div class="event-promo__left">
+            <time datetime="@@datetime" class="event-promo__date first-line">
+                @@date
+            </time>
+            <p class="event-promo__place second-line">
+                @@place
+            </p>
+        </div>
+
+        <picture class="event-promo__picture">
+            <source type="image/webp" media="(max-width: 1019px)" srcset="@@img-tablet-webp 1x, @@img-tablet-webp-2x 2x">
+            <source type="image/jpeg" media="(max-width: 1019px)" srcset="@@img-tablet 1x, @@img-tablet-2x 2x">
+            <source type="image/webp" srcset="@@img-webp 1x, @@img-webp-2x 2x">
+            <img src="@@img" srcset="@@img-2x 2x" alt="@@alt" class="event-promo__img">
+        </picture>
+
+        <div class="event-promo__right">
+            <p class="event-promo__time ">
+                <time datetime="@@datetime" class="first-line">@@time</time>  начало
+            </p>
+            <p class="event-promo__address second-line">
+                @@address
+            </p>
+        </div>
+    </div>
+</section>

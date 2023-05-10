@@ -1,0 +1,39 @@
+<section class="contacts @@class">
+    <h2 class="contacts__title section-title">Контакты</h2>
+    <div class="contacts__contact-list">
+        <div class="contacts__contact-address">
+            <!-- prettier-ignore-->
+            @@loop('contact-card.html', [
+            {
+                "class": "contacts__contact-card",
+                "icon": "ellips",
+                "title": "Томск, Белая 8",
+                "text": "2 этаж",
+                "tel-link": "207208",
+                "tel": "оф 207-208",
+                "email": "",
+            },
+            {
+                "class": "contacts__contact-card",
+                "icon": "home",
+                "title": "Отдел аренды",
+                "text": "",
+                "tel-link": "+74993500730",
+                "tel": "+7 499 350 0730",
+                "email": "hi@tagree.ru",
+            },
+            {
+                "class": "contacts__contact-card",
+                "icon": "star",
+                "title": "Отдел мероприятий",
+                "text": "",
+                "tel-link": "+74993500730",
+                "tel": "+7 499 350 0730",
+                "email": "hi@tagree.ru",
+            }
+          ])    
+        </div> 
+        <div class="contacts__map" id="js-contactsMap">
+        </div>
+    </div>
+</section>

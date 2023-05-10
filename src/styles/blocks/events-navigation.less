@@ -1,0 +1,120 @@
+.events-navigation {
+    &__arrow {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        height: 62px;
+        margin-bottom: 13px;
+        // padding: 0 40px;
+
+        // @media @bw1660 {
+        //     margin-bottom: 13px;
+        // }
+
+        @media @bw1340 {
+            height: 43px;
+        }
+
+        @media @bw768 {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__left,
+    &__right {
+        // width: 99px;
+        // height: 62px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        transition: color 0.2s;
+
+        &:hover {
+            @media (hover: hover) {
+                cursor: pointer;
+                color: @red_dark;
+            }
+        }
+
+        &:active {
+            cursor: pointer;
+            color: @red_dark;
+        }
+    }
+
+    &__left {
+        // margin-right: 122px;
+        margin-right: 9.2%;
+        transform: rotate(180deg);
+
+        @media @bw1660 {
+            margin-right: 8%;
+        }
+
+        @media @bw768 {
+            margin-right: 17%;
+        }
+    }
+
+    &__right {
+        // margin-left: 122px;
+        margin-left: 9.2%;
+
+        @media @bw1660 {
+            margin-left: 8%;
+        }
+
+        @media @bw768 {
+            margin-left: 18%;
+        }
+    }
+
+    &__point {
+        align-self: center;
+        width: 15px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: @gray;
+
+        @media @bw1340 {
+            width: 9px;
+        }
+
+        &+.events-navigation__point {
+            margin-left: 6px;
+
+            @media @bw1340{
+                margin-left: 3.5px;
+            }
+
+            @media @bw768 {
+                margin-left: 3.5px;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        max-width: 130px;
+        margin-left: auto;
+        font-weight: 600;
+        text-align: right;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        @media @bw768 {
+            font-size: 0.875rem;
+        }
+
+        &:hover {
+            @media (hover: hover) {
+                color: @red_dark;
+            }
+        }
+
+        &:active {
+            color: @red_dark;
+        }
+    }
+}

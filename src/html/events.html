@@ -1,127 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('blocks/head.html')
+@@include('blocks/head.html')
 
-  <body class="body">
-    @@include('blocks/page-header.html')
-
-    <main class="main">
-      <section class="events">
-        <div class="events_route">
-          <a href="/">Главная</a><a>/ Мероприятия</a>
+<body class="body">
+  @@include('blocks/page-header.html')
+    <main class="page-main">
+        <div class="breadcrumbs">
+          <a href="./index.html" class="breadcrumbs__item">Главная</a>
+          <a class="breadcrumbs__item breadcrumbs__item--last">Мероприятия</a>
         </div>
-        <div class="events__listing listing">
-          <h2 class="listing__section-title section-title">Мероприятия</h2>
-          <div class="listing__events-cards">
-            <!-- prettier-ignore -->
-            @@loop('blocks/events-card.html', [
-                        {
-                            "class" : "",
-                            "link" : "/",
-                            "img" : "../assets/images/events/Nirvana.png",
-                            "alt" : "Nirvana",
-                            "title" : "Собираемся и слушаем альбом Nirvana. Nirvana",
-                            "description" : "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
-                            "time" : "07.12.2022 | начало 18.00",
-                            "datetime" : "2022-12-07T18:00"
-                        },
-                        {
-                            "class" : "",
-                            "link" : "/",
-                            "img" : "assets/images/events/HowStuffWorks.png",
-                            "alt" : "HowStuffWorks",
-                            "title" : "Есть тема, нужно обсудить с HowStuffWorks",
-                            "description" : "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
-                            "time" : "14.12.2022 | начало 18.30",
-                            "datetime" : "2022-12-14T18:30"
-                        },
-                        {
-                            "class" : "",
-                            "link" : "/",
-                            "img" : "assets/images/events/Sade.png",
-                            "alt" : "Sade",
-                            "title" : "Вечер | The Best of Sade",
-                            "description" : "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
-                            "time" : "16.12.2022 | начало 20.00",
-                            "datetime" : "2022-12-16T20:00"
-                        },
-                        {
-                            "class" : "",
-                            "link" : "/",
-                            "img" : "assets/images/events/Malevich.png",
-                            "alt" : "Malevich",
-                            "title" : "Выставка Малевича в Томске",
-                            "description" : "Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.",
-                            "time" : "23.12.2022 | начало 20.00",
-                            "datetime" : "2022-12-23T20:00"
-                        },
-                        {
-                            "class" : "",
-                            "link" : "/",
-                            "img" : "assets/images/events/Tatler.png",
-                            "alt" : "Tatler",
-                            "title" : "Мастер — класс по студийной съемке от Tatler",
-                            "description" : "Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.",
-                            "time" : "25.12.2022 | начало 13.00",
-                            "datetime" : "2022-12-25T13:00"
-                        },
-                        {
-                            "class" : "",
-                            "link" : "/",
-                            "img" : "assets/images/events/TheHatters.png",
-                            "alt" : "TheHatters",
-                            "title" : "Повесилимся на славу на концерте The Hatters",
-                            "description" : "Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко",
-                            "time" : "27.12.2022 | начало 10.00",
-                            "datetime" : "2022-12-27T10:00"
-                        }
-                    ])
+        <div class="events">
+            @@include('blocks/events-listing.html', {"class": "events__listing"})
+            @@include('blocks/tariffs-table.html', {"class": "events__tariffs"})
+            @@include('blocks/block-choice.html', {"class": "events__choice"})
+            @@include('blocks/info.html', {"class": "events__info"})       
           </div>
-        </div>
-
-        <div class="events__services services">
-          <h2 class="services__section-title section-title">
-            Дополнительные услуги
-          </h2>
-          <p class="services__section-description section-description">
-            Перед запуском проекта, мы подготавливаем подробную смету и
-            согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы
-            можем приступать к реализациии проекта, начинается сложная, но
-            интересная работа, результатом которой будет проведение вашего
-            мероприятия на высшем уровне.
-          </p>
-
-          @@include('blocks/table-tariffs.html')
-        </div>
-
-        @@include('blocks/want.html')
-
-        <div class="events__contacts contacts">
-          <!-- prettier-ignore -->
-          @@loop('blocks/contacts-card.html', [
-              {
-                "class" : "",
-                "icon" : "warning",
-                "title" : "Цена",
-                "description" : "Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом."
-              },
-              {
-                "class" : "",
-                "icon" : "contact",
-                "title" : "Контакты",
-                "description" : "Отдел организации мероприятий <br/> +7 499 350 0730 <br/> hi@tagree.ru"
-              },
-              {
-                "class" : "",
-                "icon" : "handshake",
-                "title" : "Преимущество",
-                "description" : "Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и холдингам."
-              },
-            ])
-        </div>
-      </section>
     </main>
+  @@include('blocks/page-footer.html', {"class": ""})
+  @@include('blocks/event-pp.html')
+  <script src="./scripts/jquery-3.6.0.min.js"></script>
+  <script src="./scripts/jquery.selectric.min.js"></script>
+  <script src="./scripts/air-datapicker.js"></script>
+  <script src="./scripts/jquery.mask.min.js"></script>
+  <script src="./scripts/jquery.validate.js"></script>
+  <script src="./scripts/jquery.validate-init.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
 
-    @@include('blocks/page-footer.html')
-  </body>
 </html>

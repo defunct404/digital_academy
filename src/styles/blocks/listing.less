@@ -1,9 +1,132 @@
-.listing
-{
-    &__events-cards
-    {
+.listing {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1414px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @media @bw1340 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media @bw768 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__container {
+    .container();
+    z-index: 10;
+  }
+
+  &__events-list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -30px;
+    justify-content: center;
+    margin: 0 -30px -120px;
+    z-index: 10;
+
+    @media @bw1660 {
+      margin: 0 -20px -100px;
     }
+
+    @media @bw1340 {
+      margin: 0 -15px -100px;
+    }
+
+    @media @bw1020 {
+      margin: 0 -15px -80px;
+    }
+
+    @media @bw768 {
+      justify-content: center;
+      margin: 0 -10px -80px;
+    }
+
+    @media @bw650 {
+      margin: 0 0 -60px;
+    }
+  }
+
+  &__event-card {
+    width: calc(33.3333% - 60px);
+    margin: 0 30px 120px;
+
+    @media @bw1660 {
+      width: calc(33.3333% - 40px);
+      margin: 0 20px 100px;
+    }
+
+    @media @bw1340 {
+      width: calc(33.333% - 30px);
+      margin: 0 15px 100px;
+    }
+
+    @media @bw1020 {
+      width: calc(50% - 30px);
+      max-width: 405px;
+      margin: 0 15px 80px;
+    }
+
+    @media @bw768 {
+      margin: 0 10px 80px;
+    }
+
+    @media @bw650 {
+      width: 100%;
+      // min-height: 491px;
+      margin: 0 0 60px;
+    }
+  }
+
+  /*на главной странице не используется*/
+  &__nav {
+    left: 0;
+  }
+
+  &__link {
+    display: block;
+    max-width: 130px;
+    margin-left: auto;
+    padding-top: 13px;
+    text-align: right;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    @media @bw768 {
+      padding-top: 31px;
+    }
+
+    &--pt85 {
+      padding-top: 85px;
+
+      @media @bw1660 {
+        padding-top: 74px;
+      }
+
+      @media @bw1340 {
+        padding-top: 55px;
+      }
+
+      @media @bw768 {
+        padding-top: 45px;
+        font-size: 0.875rem;
+      }
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        color: @red_dark;
+      }
+    }
+
+    &:active {
+      color: @red_dark;
+    }
+  }
 }

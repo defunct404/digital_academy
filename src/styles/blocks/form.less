@@ -1,191 +1,168 @@
 .form {
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+    box-sizing: border-box;
 
-  &__field,
-  &__group {
-    width: 100%;
-    &--w50 {
-      width: calc(50% - 30px);
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
-  }
 
-  &__field {
-    margin: 0 0 30px;
-  }
+    &__field,
+    &__group {
+        width: 100%;
 
-  &__check-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0 0 30px;
-  }
+        &--w50 {
+            width: calc(50% - 22px);
 
-  &__check {
-    margin-bottom: 10px;
-    &:last-child {
-      margin-bottom: 0;
+            @media @bw1660 {
+                width: calc(50% - 29px);
+            }
+
+            @media @bw1340 {
+                width: calc(50% - 16px);
+            }
+
+            @media @bw768 {
+                width: 100%;
+            }
+        }
     }
-  }
 
-  &__section {
-    margin: 0 0 20px;
-  }
+    &__field {
+        margin: 0 0 30px;
 
-  &__section-title {
-    margin: 0 0 10px;
-    color: @black;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 25px;
-  }
+        @media @bw1660 {
+            margin: 0 0 28px;
+        }
 
-  &__btns {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
+        &--mb {
+            margin-bottom: 13px;
 
-  &__submit {
-    &--w50 {
-      width: calc(50% - 30px);
+            @media @bw1660 {
+                margin-bottom: 30px;
+            }
+        }
     }
-  }
 
-  &__close-btn {
-    margin: 0 auto;
-    padding: 4px 0;
-    border: none;
-    background: transparent;
-    color: @black;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    text-decoration: underline;
-    transition: color 0.2s;
-
-    &:hover {
-      color: @red;
+    &__check-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 38px;
     }
-  }
-}
 
-.check {
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
+    &__check {
+        margin-bottom: 10px;
 
-  p {
-    margin-left: 15px;
-    font-size: 0.875rem /* 14px */;
-    line-height: 1.1875rem /* 19px */;
-    font-weight: 300;
-  }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
-  label {
-    position: relative;
+    &__check .check__label {
+        @media @bw768 {
+            padding-top: 3px;
+        }
+    }
 
-    display: flex;
-    align-items: center;
-    margin-left: -6px;
+    &__check #agree-error {
+        padding-left: 15px;
+    }
 
-    font-size: 0.875rem /* 14px */;
-    line-height: 1.1875rem /* 19px */;
-    font-weight: 300;
+    &__section {
+        margin: 0 0 26px;
 
-    cursor: pointer;
-  }
+        @media @bw1660 {
+            margin: 0 0 20px;
+        }
+    }
 
-  input {
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-}
+    &__section-title {
+        padding-top: 4px;
+        margin: 0 0 15px;
+        color: @black;
+        font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 1.38;
 
-.check label > span {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  margin-right: 15px;
-  border: 2px solid @black;
-  border-radius: 0;
-  transition: all 0.3s;
-}
+        @media @bw1660 {
+            margin: 0 0 10px;
+        }
 
-.check input:checked + label > span {
-  border: 10px solid @black;
-  animation: bounce 250ms;
-}
+        @media @bw768 {
+            font-size: 1rem;
+        }
+    }
 
-.check input:checked + label > span::before {
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: 4px;
-  border-right: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  transform: rotate(45deg);
-  transform-origin: 0% 100%;
-  animation: checked-box 125ms 250ms forwards;
-}
+    &__btns {
+        display: flex;
+        align-items: center;
 
-@keyframes checked-box {
-  0% {
-    width: 0;
-    height: 0;
-    border-color: white;
-    transform: translate(0, 0) rotate(45deg);
-  }
-  33% {
-    width: 4px;
-    height: 0;
-    border-color: white;
-    transform: translate(0, 0) rotate(45deg);
-  }
-  100% {
-    width: 4px;
-    height: 8px;
-    border-color: white;
-    transform: translate(0, -8px) rotate(45deg);
-  }
-}
+        @media @bw768 {
+            justify-content: center;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+    }
 
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  33% {
-    transform: scale(0.7);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+    &__submit {
+        &--w50 {
+            width: calc(50% - 35px);
 
-.btn {
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 15px 40px;
-  border: 1px solid @black;
-  background-color: transparent;
-  outline: none;
-  color: @black;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-  overflow: hidden;
-  cursor: pointer;
+            @media @bw1340 {
+                width: calc(50% - 15px);
+            }
 
-  &:hover {
-    background-color: @black;
-    color: #fff;
-  }
+            @media @bw768 {
+                width: 100%;
+                max-width: 289px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__close-btn {
+        width: 315px;
+        margin: 0 auto 0 10px;
+        padding: 14px 0;
+        border: none;
+        background: transparent;
+        color: @black;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.375;
+        text-decoration: underline;
+        text-align: center;
+        transition: color 0.2s;
+
+        @media @bw1660 {
+            margin: 0 auto 0 79px;
+        }
+
+        @media @bw1340 {
+            width: calc(50% - 10px);
+            margin: auto;
+            padding-right: 16px;
+        }
+
+        @media @bw768 {
+            width: 100%;
+            max-width: 289px;
+            margin: 0 auto;
+            padding: 14px 25px;
+            font-size: 0.875rem;
+        }
+
+        &:hover {
+            @media (hover: hover) {
+                color: @red;
+                cursor: pointer;
+            }
+        }
+
+        &:active {
+            color: @red;
+            cursor: pointer;
+        }
+    }
 }

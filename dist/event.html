@@ -1,162 +1,482 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<!DOCTYPE html>
-<html lang="ru">
-
 <head>
-  <meta charset="UTF=8" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-title" content="Lenni Art">
+  <meta name="application-name" content="Lenni Art">
+
+  <meta name="theme-color" content="#dedede">
+
+  <meta name="msapplication-TileColor" content="#dedede">
+  <meta name="msapplication-TileImage" content="./assets/favicons/ms-icon-144x144.png">
+  <meta name="msapplication-config" content="./assets/favicons/browserconfig.xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.min.css">
+
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./assets/icons/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicons/android-icon-192x192.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest.json">
+
   <title>Lenni Art</title>
+  <meta name="description" content="Арт—пространство для людей, горящих сердец и делом">
+  <meta name="keywords" content="Lenni Art, пространство, мероприятия">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png" />
-  <link rel="manifest" href="assets/icons/site.webmanifest" />
-  <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="theme-color" content="#ffffff" />
-
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="styles/styles.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" type="text/css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" type="text/css">
+  <meta property="og:title" content="Lenni Art">
+  <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом">
+  <meta property="og:image" content="/assets/images/lenni-art.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lenni-art.ru/">
 </head>
 
-</html>
-
 <body class="body">
+  <header class="page-header">
+    <div class="page-header__container">
+      <a href="./index.html" class="page-header__logo">
+        <svg class="page-header__logo-icon" width="202" height="147">
+          <use xlink:href="assets/icons/symbols.svg#logo" />
+        </svg>
+      </a>
+      <nav class="page-header__nav">
+        <a href="../events.html" class="page-header__nav-link">Мероприятия</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">О нас</a>
+        <a href="#" class="page-header__nav-link">Контакты</a>
 
-  <!DOCTYPE html>
-  <html lang="ru">
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
 
-  <body class="body">
-    <header class="header">
-      <div class="header-container">
-        <a href="/">
-          <svg width="202" height="147">
-            <use xlink:href="assets/icons/symbols.svg#logo" />
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <div class="page-header__right-block">
+        <a href="#" class="page-header__user-btn">
+          Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
           </svg>
         </a>
-        <nav>
-          <ul class="header-menu">
-            <a href="../events.html">Мероприятия</a>
-            <a href="#blog">Блог</a>
-            <a href="#aboutUs">О нас</a>
-            <a href="#contacts">Контакты</a>
-          </ul>
-        </nav>
-        <button class="button-white">Войти</button>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
-    </header>
-  </body>
-
-  </html>
-
-  <main class="main">
+    </div>
+  </header>
+  <main class="page-main">
+    <div class="breadcrumbs breadcrumbs--product-page">
+      <a href="./index.html" class="breadcrumbs__item">Главная</a>
+      <a href="./events.html" class="breadcrumbs__item">Мероприятия</a>
+      <a class="breadcrumbs__item breadcrumbs__item--last">Вечер | The Best of Sade</a>
+    </div>
     <article class="event">
+      <h1 class="event__title is-hidden">Страница мероприятия</h1>
+      <section class="event-promo event__promo">
+        <h2 class="event-promo__title">Вечер | The Best of Sade</h2>
+        <div class="event-promo__info-block">
+          <div class="event-promo__left">
+            <time datetime="2022-12-16T20:00" class="event-promo__date first-line">
+              16/12/2022
+            </time>
+            <p class="event-promo__place second-line">
+              Кафе «Птичка»
+            </p>
+          </div>
+
+          <picture class="event-promo__picture">
+            <source type="image/webp" media="(max-width: 1019px)" srcset="/assets/images/event-promo/event_768.webp 1x, /assets/images/event-promo/event_768@2x.webp 2x">
+            <source type="image/jpeg" media="(max-width: 1019px)" srcset="/assets/images/event-promo/event_768.jpg 1x, /assets/images/event-promo/event_768@2x.jpg 2x">
+            <source type="image/webp" srcset="/assets/images/event-promo/event.webp 1x, /assets/images/event-promo/event@2x.webp 2x">
+            <img src="/assets/images/event-promo/event.jpg" srcset="/assets/images/event-promo/event@2x.jpg 2x" alt="Вечер | The Best of Sade" class="event-promo__img">
+          </picture>
+
+          <div class="event-promo__right">
+            <p class="event-promo__time ">
+              <time datetime="2022-12-16T20:00" class="first-line">20.00</time> начало
+            </p>
+            <p class="event-promo__address second-line">
+              Ленина 10 | 2 этаж
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="event__content content">
+        <div class="event__content-container">
+          <h5>Программа мероприятия:</h5>
+          <ul>
+            <li>20:15 — Приветствие гостей</li>
+            <li>20:30 — Первая подача блюд | Салаты</li>
+            <li>20:40 — Живой вокал | Композиции 1-3</li>
+            <li>21:20 — Подача горячих блюд</li>
+            <li>21:30 — Живой вокал | Композиции 4-7</li>
+            <li>22:15 — Подача десерта</li>
+            <li>22:30 — Живой вокал | Композиции 8-9</li>
+            <li>23:00 — Завершение вечера</li>
+          </ul>
+          <h5>The Best Of Sade</h5>
+          <p>
+            Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые популярные хиты
+            группы, раритеты и их любимые треки.
+          </p>
+          <p>
+            Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
+            <br>
+            Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав более 2
+            миллионов копий в Европе.
+          </p>
+          <ol>
+            <li>Your Love Is King</li>
+            <li>Hang On To Your Love</li>
+            <li>Smooth Operator</li>
+            <li>Jezebel</li>
+            <li>The Sweetest Taboo</li>
+            <li>Is It A Crime</li>
+            <li>Never As Good As The First Time</li>
+            <li>Love Is Stronger Than Pride</li>
+            <li>Paradise</li>
+          </ol>
+        </div>
+      </section>
+
       <form class="reserve event__reserve">
-        <div class="reserve__checks">
-          Чекбоксы
+        <div class="reserve__checks reserve__checks--wrapper">
+          <h4 class="reserve__section-title reserve__section-title--bw768">Забронировать столик</h4>
+          <label class="reserve__checks check check--red">
+            <input type="checkbox" name="table_1" class="check__input">
+            <span class="check__mark"></span>
+            <span class="check__label">1 стол</span>
+          </label>
+          <label class="reserve__checks check">
+            <input type="checkbox" name="table_2" class="check__input">
+            <span class="check__mark"></span>
+            <span class="check__label">2 стол</span>
+          </label>
+          <label class="reserve__checks check">
+            <input type="checkbox" name="table_3" class="check__input">
+            <span class="check__mark"></span>
+            <span class="check__label">3 стол</span>
+          </label>
+          <label class="reserve__checks check">
+            <input type="checkbox" name="table_4" class="check__input">
+            <span class="check__mark"></span>
+            <span class="check__label">4 стол</span>
+          </label>
+          <label class="reserve__checks check check--disabled">
+            <input type="checkbox" name="table_5" class="check__input">
+            <span class="check__mark"></span>
+            <span class="check__label">5 стол</span>
+          </label>
+          <label class="reserve__checks check">
+            <input type="checkbox" name="table_6" class="check__input">
+            <span class="check__mark"></span>
+            <span class="check__label">6 стол</span>
+          </label>
+          <label class="reserve__checks check check--red">
+            <input type="checkbox" name="table_7" class="check__input">
+            <span class="check__mark"></span>
+            <span class="check__label">7 стол</span>
+          </label>
+          <label class="reserve__checks check check--red">
+            <input type="checkbox" name="table_8" class="check__input">
+            <span class="check__mark"></span>
+            <span class="check__label">8 стол</span>
+          </label>
+          <label class="reserve__checks check check--red">
+            <input type="checkbox" name="table_9" class="check__input">
+            <span class="check__mark"></span>
+            <span class="check__label">9 стол</span>
+          </label>
+          <label class="reserve__checks check">
+            <input type="checkbox" name="table_10" class="check__input">
+            <span class="check__mark"></span>
+            <span class="check__label">10 стол</span>
+          </label>
+          <label class="reserve__checks check">
+            <input type="checkbox" name="table_11" class="check__input">
+            <span class="check__mark"></span>
+            <span class="check__label">11 стол</span>
+          </label>
         </div>
         <div class="reserve__scheme">
-          Схема столов
+          <div class="reserve__scheme-container">
+            <h4 class="reserve__scheme-title">Сцена</h4>
+            <div class="reserve__scheme-wrapper">
+              <svg class="reserve__scene scene" width="780" height="399" viewBox="0 0 780 399" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g class="scene__dance-floor">
+                  <path d="M462 82.5C462 121.436 430.436 153 391.5 153C352.564 153 321 121.436 321 82.5C321 43.5639 352.564 12 391.5 12C430.436 12 462 43.5639 462 82.5Z" fill="#1F1E1E" />
+                  <path d="M362.453 89H360.586V79.1797H357.227V77.5781H365.812V79.1797H362.453V89ZM372.781 89L372.414 87.7969H372.352C371.935 88.3229 371.516 88.6823 371.094 88.875C370.672 89.0625 370.13 89.1562 369.469 89.1562C368.62 89.1562 367.956 88.9271 367.477 88.4688C367.003 88.0104 366.766 87.362 366.766 86.5234C366.766 85.6328 367.096 84.9609 367.758 84.5078C368.419 84.0547 369.427 83.8073 370.781 83.7656L372.273 83.7188V83.2578C372.273 82.7057 372.143 82.2943 371.883 82.0234C371.628 81.7474 371.229 81.6094 370.688 81.6094C370.245 81.6094 369.82 81.6745 369.414 81.8047C369.008 81.9349 368.617 82.0885 368.242 82.2656L367.648 80.9531C368.117 80.7083 368.63 80.5234 369.188 80.3984C369.745 80.2682 370.271 80.2031 370.766 80.2031C371.865 80.2031 372.693 80.4427 373.25 80.9219C373.812 81.401 374.094 82.1536 374.094 83.1797V89H372.781ZM370.047 87.75C370.714 87.75 371.247 87.5651 371.648 87.1953C372.055 86.8203 372.258 86.2969 372.258 85.625V84.875L371.148 84.9219C370.284 84.9531 369.654 85.099 369.258 85.3594C368.867 85.6146 368.672 86.0078 368.672 86.5391C368.672 86.9245 368.786 87.224 369.016 87.4375C369.245 87.6458 369.589 87.75 370.047 87.75ZM378.492 80.3594V83.8281H382.562V80.3594H384.398V89H382.562V85.2734H378.492V89H376.656V80.3594H378.492ZM394.727 87.5781H395.977V92.0391H394.25V89H387.031V80.3594H388.867V87.5469H392.891V80.3594H394.727V87.5781ZM405.102 80.3594V89H403.258V81.8125H399.383V89H397.547V80.3594H405.102ZM415.398 84.6641C415.398 86.0755 415.036 87.1771 414.312 87.9688C413.589 88.7604 412.581 89.1562 411.289 89.1562C410.482 89.1562 409.768 88.974 409.148 88.6094C408.529 88.2448 408.052 87.7214 407.719 87.0391C407.385 86.3568 407.219 85.5651 407.219 84.6641C407.219 83.263 407.578 82.1693 408.297 81.3828C409.016 80.5964 410.029 80.2031 411.336 80.2031C412.586 80.2031 413.576 80.6068 414.305 81.4141C415.034 82.2161 415.398 83.2995 415.398 84.6641ZM409.109 84.6641C409.109 86.6589 409.846 87.6562 411.32 87.6562C412.779 87.6562 413.508 86.6589 413.508 84.6641C413.508 82.6901 412.773 81.7031 411.305 81.7031C410.534 81.7031 409.974 81.9583 409.625 82.4688C409.281 82.9792 409.109 83.7109 409.109 84.6641ZM424.617 89H422.766V81.7969H420.383C420.237 83.651 420.039 85.099 419.789 86.1406C419.544 87.1823 419.221 87.9427 418.82 88.4219C418.424 88.901 417.909 89.1406 417.273 89.1406C416.872 89.1406 416.536 89.0833 416.266 88.9688V87.5312C416.458 87.6042 416.651 87.6406 416.844 87.6406C417.375 87.6406 417.792 87.0443 418.094 85.8516C418.401 84.6536 418.641 82.8229 418.812 80.3594H424.617V89Z" fill="white" />
+                </g>
+
+                <g class="scene__table scene__table--red">
+                  <g class="scene__table-group" stroke="#BC3324">
+                    <rect x="507.5" y="35.5" width="83" height="28" />
+                    <circle cx="527" cy="20" r="11.5" />
+                    <circle cx="570" cy="20" r="11.5" />
+                    <circle cx="606" cy="48" r="11.5" />
+                    <circle cx="570" cy="79" r="11.5" />
+                    <circle cx="527" cy="79" r="11.5" />
+                  </g>
+
+                  <path class="scene__table-num" d="M552.199 56H548.283V48.9395C548.283 48.8092 548.283 48.5716 548.283 48.2266C548.283 47.875 548.286 47.4876 548.293 47.0645C548.306 46.6413 548.322 46.2604 548.342 45.9219C548.173 46.1237 548.013 46.2962 547.863 46.4395C547.72 46.5827 547.58 46.7161 547.443 46.8398L545.822 48.1777L543.82 45.7168L548.723 41.7227H552.199V56Z" fill="#BC3324" />
+                  <rect x="507" y="8" width="111" height="83" fill="transparent" />
+                </g>
+
+                <g class="scene__table">
+                  <g class="scene__table-group" stroke="#1F1E1E">
+                    <rect x="712.5" y="4.5" width="40" height="93" />
+                    <circle cx="697" cy="16" r="11.5" />
+                    <circle cx="768" cy="17" r="11.5" />
+                    <circle cx="697" cy="49" r="11.5" />
+                    <circle cx="768" cy="50" r="11.5" />
+                    <circle cx="697" cy="82" r="11.5" />
+                    <circle cx="768" cy="83" r="11.5" />
+                    <circle cx="733" cy="113" r="11.5" />
+                  </g>
+                  <path class="scene__table-num" d="M737.957 60H727.596V57.4609L731.082 53.9355C732.078 52.8939 732.729 52.1842 733.035 51.8066C733.341 51.4225 733.553 51.0938 733.67 50.8203C733.794 50.5469 733.855 50.2604 733.855 49.9609C733.855 49.5898 733.735 49.2969 733.494 49.082C733.253 48.8672 732.915 48.7598 732.479 48.7598C732.029 48.7598 731.574 48.89 731.111 49.1504C730.656 49.4043 730.138 49.7819 729.559 50.2832L727.439 47.8027C728.175 47.1452 728.794 46.6764 729.295 46.3965C729.796 46.11 730.34 45.8919 730.926 45.7422C731.518 45.5924 732.182 45.5176 732.918 45.5176C733.842 45.5176 734.666 45.6803 735.389 46.0059C736.118 46.3314 736.681 46.7969 737.078 47.4023C737.482 48.0013 737.684 48.6751 737.684 49.4238C737.684 49.9837 737.612 50.5013 737.469 50.9766C737.332 51.4518 737.117 51.9206 736.824 52.3828C736.531 52.8385 736.141 53.3203 735.652 53.8281C735.171 54.3359 734.139 55.2995 732.557 56.7188V56.8164H737.957V60Z" fill="#1F1E1E" />
+                  <rect x="685" y="4" width="95" height="121" fill="transparent" />
+                </g>
+
+                <g class="scene__table">
+                  <g class="scene__table-group" stroke="#1F1E1E">
+                    <rect x="712.5" y="185.5" width="40" height="93" />
+                    <circle cx="697" cy="197" r="11.5" />
+                    <circle cx="768" cy="198" r="11.5" />
+                    <circle cx="697" cy="230" r="11.5" />
+                    <circle cx="768" cy="231" r="11.5" />
+                    <circle cx="697" cy="263" r="11.5" />
+                    <circle cx="768" cy="264" r="11.5" />
+                    <circle cx="733" cy="294" r="11.5" />
+                  </g>
+
+                  <path class="scene__table-num" d="M737.479 229.818C737.479 230.704 737.208 231.465 736.668 232.104C736.128 232.735 735.346 233.194 734.324 233.48V233.539C736.707 233.839 737.898 234.965 737.898 236.918C737.898 238.246 737.371 239.291 736.316 240.053C735.268 240.814 733.81 241.195 731.941 241.195C731.173 241.195 730.46 241.14 729.803 241.029C729.152 240.919 728.445 240.717 727.684 240.424V237.221C728.309 237.54 728.943 237.777 729.588 237.934C730.239 238.083 730.838 238.158 731.385 238.158C732.231 238.158 732.846 238.041 733.23 237.807C733.621 237.566 733.816 237.191 733.816 236.684C733.816 236.293 733.715 235.993 733.514 235.785C733.312 235.57 732.986 235.411 732.537 235.307C732.088 235.196 731.502 235.141 730.779 235.141H729.9V232.24H730.799C732.758 232.24 733.738 231.739 733.738 230.736C733.738 230.359 733.592 230.079 733.299 229.896C733.012 229.714 732.625 229.623 732.137 229.623C731.225 229.623 730.281 229.929 729.305 230.541L727.703 227.963C728.458 227.442 729.23 227.071 730.018 226.85C730.812 226.628 731.72 226.518 732.742 226.518C734.22 226.518 735.379 226.811 736.219 227.396C737.059 227.982 737.479 228.79 737.479 229.818Z" fill="#1F1E1E" />
+                  <rect x="685" y="185" width="95" height="121" fill="transparent" />
+                </g>
+
+                <g class="scene__table scene__table--red">
+                  <g class="scene__table-group" stroke="#BC3324">
+                    <rect x="507.5" y="182.5" width="83" height="28" />
+
+                    <circle cx="527" cy="167" r="11.5" />
+                    <circle cx="570" cy="167" r="11.5" />
+                    <circle cx="606" cy="195" r="11.5" />
+                    <circle cx="570" cy="226" r="11.5" />
+                    <circle cx="527" cy="226" r="11.5" />
+                  </g>
+
+                  <path class="scene__table-num" d="M554.416 199.236H552.844V202H549.035V199.236H543.342V196.404L549.279 187.723H552.844V196.355H554.416V199.236ZM549.035 196.355V194.695C549.035 194.383 549.045 193.963 549.064 193.436C549.09 192.902 549.11 192.622 549.123 192.596H549.016C548.794 193.097 548.544 193.566 548.264 194.002L546.682 196.355H549.035Z" fill="#BC3324" />
+                  <rect x="507" y="155" width="111" height="83" fill="transparent" />
+                </g>
+
+                <g class="scene__table">
+                  <g class="scene__table-group" stroke="#1F1E1E">
+                    <rect x="494.5" y="278.5" width="40" height="93" />
+
+                    <circle cx="479" cy="290" r="11.5" />
+                    <circle cx="550" cy="291" r="11.5" />
+                    <circle cx="479" cy="323" r="11.5" />
+                    <circle cx="550" cy="324" r="11.5" />
+                    <circle cx="479" cy="356" r="11.5" />
+                    <circle cx="550" cy="357" r="11.5" />
+                    <circle cx="515" cy="387" r="11.5" />
+                  </g>
+
+                  <path class="scene__table-num" d="M515.484 322.645C516.305 322.645 517.044 322.837 517.701 323.221C518.365 323.598 518.88 324.135 519.244 324.832C519.615 325.529 519.801 326.333 519.801 327.244C519.801 328.839 519.319 330.063 518.355 330.916C517.398 331.769 515.947 332.195 514 332.195C512.333 332.195 510.973 331.938 509.918 331.424V328.26C510.484 328.52 511.122 328.735 511.832 328.904C512.548 329.074 513.163 329.158 513.678 329.158C514.394 329.158 514.944 329.008 515.328 328.709C515.712 328.403 515.904 327.954 515.904 327.361C515.904 326.814 515.709 326.388 515.318 326.082C514.928 325.776 514.335 325.623 513.541 325.623C512.936 325.623 512.281 325.737 511.578 325.965L510.162 325.262L510.699 317.723H518.844V320.936H513.98L513.805 322.82C514.312 322.723 514.674 322.671 514.889 322.664C515.104 322.651 515.302 322.645 515.484 322.645Z" fill="#1F1E1E" />
+                  <rect x="467" y="278" width="95" height="121" fill="transparent" />
+                </g>
+
+                <g class="scene__table">
+                  <g class="scene__table-group" stroke="#1F1E1E">
+                    <rect x="273.5" y="278.5" width="40" height="93" />
+                    <circle cx="258" cy="290" r="11.5" />
+                    <circle cx="329" cy="291" r="11.5" />
+                    <circle cx="258" cy="323" r="11.5" />
+                    <circle cx="329" cy="324" r="11.5" />
+                    <circle cx="258" cy="356" r="11.5" />
+                    <circle cx="329" cy="357" r="11.5" />
+                    <circle cx="294" cy="387" r="11.5" />
+                  </g>
+
+                  <path class="scene__table-num" d="M288.684 326.965C288.684 324.973 288.967 323.361 289.533 322.131C290.106 320.894 290.946 319.982 292.053 319.396C293.166 318.811 294.536 318.518 296.164 318.518C296.743 318.518 297.421 318.573 298.195 318.684V321.701C297.544 321.577 296.838 321.516 296.076 321.516C294.787 321.516 293.827 321.799 293.195 322.365C292.564 322.932 292.219 323.856 292.16 325.139H292.277C292.863 324.032 293.804 323.479 295.1 323.479C296.369 323.479 297.352 323.889 298.049 324.709C298.752 325.523 299.104 326.659 299.104 328.117C299.104 329.686 298.661 330.926 297.775 331.838C296.89 332.743 295.653 333.195 294.064 333.195C292.378 333.195 291.06 332.648 290.109 331.555C289.159 330.461 288.684 328.931 288.684 326.965ZM293.977 330.139C294.387 330.139 294.719 329.986 294.973 329.68C295.233 329.367 295.363 328.872 295.363 328.195C295.363 327.036 294.914 326.457 294.016 326.457C293.573 326.457 293.212 326.607 292.932 326.906C292.658 327.206 292.521 327.57 292.521 328C292.521 328.625 292.655 329.139 292.922 329.543C293.189 329.94 293.54 330.139 293.977 330.139Z" fill="#1F1E1E" />
+                  <rect opacity="0.01" x="246" y="278" width="95" height="121" fill="transparent" />
+                </g>
+
+                <g class="scene__table scene__table--red">
+                  <g class="scene__table-group" stroke="#BC3324">
+                    <rect x="320.5" y="183.5" width="83" height="28" />
+
+                    <circle cx="383" cy="227" r="11.5" />
+                    <circle cx="419" cy="197" r="11.5" />
+                    <circle cx="305" cy="197" r="11.5" />
+                    <circle cx="340" cy="227" r="11.5" />
+                  </g>
+
+                  <path class="scene__table-num" d="M358.041 204L362.943 192.916H356.762V189.723H367.064V191.998L362.035 204H358.041Z" fill="#BC3324" />
+                  <rect x="293" y="183" width="138" height="56" fill="transparent" />
+                </g>
+
+                <g class="scene__table scene__table--red">
+                  <g class="scene__table-group" stroke="#BC3324">
+                    <rect x="187.5" y="169.5" width="61" height="36" />
+                    <circle cx="216" cy="221" r="11.5" transform="rotate(-180 216 221)" />
+                    <circle cx="171" cy="185" r="11.5" transform="rotate(-180 171 185)" />
+                    <circle cx="216" cy="154" r="11.5" transform="rotate(-180 216 154)" />
+                  </g>
+
+                  <path class="scene__table-num" d="M215.898 180.518C216.842 180.518 217.669 180.645 218.379 180.898C219.095 181.152 219.655 181.54 220.059 182.061C220.462 182.575 220.664 183.223 220.664 184.004C220.664 184.577 220.557 185.081 220.342 185.518C220.133 185.947 219.844 186.325 219.473 186.65C219.108 186.969 218.685 187.246 218.203 187.48C218.652 187.734 219.098 188.031 219.541 188.369C219.984 188.708 220.352 189.108 220.645 189.57C220.938 190.026 221.084 190.57 221.084 191.201C221.084 191.963 220.898 192.646 220.527 193.252C220.156 193.851 219.587 194.326 218.818 194.678C218.05 195.023 217.064 195.195 215.859 195.195C214.655 195.195 213.669 195.029 212.9 194.697C212.132 194.365 211.566 193.903 211.201 193.311C210.843 192.712 210.664 192.021 210.664 191.24C210.664 190.576 210.775 190.016 210.996 189.561C211.224 189.105 211.533 188.717 211.924 188.398C212.314 188.079 212.76 187.793 213.262 187.539C212.865 187.272 212.5 186.969 212.168 186.631C211.836 186.292 211.572 185.905 211.377 185.469C211.182 185.033 211.084 184.538 211.084 183.984C211.084 183.216 211.289 182.575 211.699 182.061C212.109 181.546 212.676 181.162 213.398 180.908C214.128 180.648 214.961 180.518 215.898 180.518ZM214.199 191.084C214.199 191.481 214.342 191.803 214.629 192.051C214.915 192.298 215.312 192.422 215.82 192.422C216.413 192.422 216.846 192.311 217.119 192.09C217.399 191.862 217.539 191.553 217.539 191.162C217.539 190.869 217.451 190.605 217.275 190.371C217.106 190.13 216.908 189.922 216.68 189.746C216.452 189.57 216.253 189.434 216.084 189.336L215.82 189.18C215.527 189.329 215.257 189.499 215.01 189.688C214.769 189.87 214.574 190.078 214.424 190.312C214.274 190.54 214.199 190.798 214.199 191.084ZM215.879 183.301C215.56 183.301 215.283 183.395 215.049 183.584C214.814 183.766 214.697 184.017 214.697 184.336C214.697 184.544 214.746 184.74 214.844 184.922C214.948 185.098 215.085 185.26 215.254 185.41C215.43 185.56 215.625 185.697 215.84 185.82C216.029 185.71 216.214 185.589 216.396 185.459C216.579 185.329 216.732 185.173 216.855 184.99C216.979 184.808 217.041 184.59 217.041 184.336C217.041 184.017 216.924 183.766 216.689 183.584C216.462 183.395 216.191 183.301 215.879 183.301Z" fill="#BC3324" />
+                  <rect x="159" y="142" width="90" height="91" fill="transparent" />
+                </g>
+
+                <g class="scene__table scene__table--red">
+                  <g class="scene__table-group" stroke="#BC3324">
+                    <rect x="222.5" y="27.5" width="61" height="36" />
+                    <circle cx="251" cy="79" r="11.5" transform="rotate(-180 251 79)" />
+                    <circle cx="206" cy="43" r="11.5" transform="rotate(-180 206 43)" />
+                    <circle cx="251" cy="12" r="11.5" transform="rotate(-180 251 12)" />
+                  </g>
+
+                  <path class="scene__table-num" d="M256.064 45.2559C256.064 48.0488 255.462 50.0703 254.258 51.3203C253.053 52.5703 251.126 53.1953 248.477 53.1953C247.604 53.1953 246.94 53.1628 246.484 53.0977V50.041C247.044 50.1452 247.604 50.1973 248.164 50.1973C249.544 50.1973 250.609 49.9141 251.357 49.3477C252.106 48.7747 252.513 47.873 252.578 46.6426H252.461C252.207 47.1113 251.956 47.4499 251.709 47.6582C251.462 47.8665 251.159 48.026 250.801 48.1367C250.443 48.2474 249.997 48.3027 249.463 48.3027C248.226 48.3027 247.259 47.8893 246.562 47.0625C245.866 46.2357 245.518 45.0964 245.518 43.6445C245.518 42.0625 245.967 40.8223 246.865 39.9238C247.77 39.0254 249.007 38.5762 250.576 38.5762C252.321 38.5762 253.672 39.1556 254.629 40.3145C255.586 41.4733 256.064 43.1204 256.064 45.2559ZM250.684 41.6621C250.26 41.6621 249.915 41.8151 249.648 42.1211C249.388 42.4271 249.258 42.9186 249.258 43.5957C249.258 44.1296 249.372 44.556 249.6 44.875C249.827 45.1875 250.176 45.3438 250.645 45.3438C251.068 45.3438 251.436 45.1908 251.748 44.8848C252.061 44.5788 252.217 44.2109 252.217 43.7812C252.217 43.2018 252.07 42.7038 251.777 42.2871C251.491 41.8704 251.126 41.6621 250.684 41.6621Z" fill="#BC3324" />
+                  <rect x="194" width="90" height="91" fill="transparent" />
+                </g>
+
+                <g class="scene__table">
+                  <g class="scene__table-group" stroke="#1F1E1E">
+                    <path d="M110.5 65V0.5H141.5V64.8261V92.5H15.5V65.5H110H110.5V65Z" />
+                    <circle cx="27" cy="50" r="11.5" />
+                    <circle cx="61" cy="50" r="11.5" />
+                    <circle cx="94" cy="50" r="11.5" />
+                    <circle cx="94" cy="16" r="11.5" />
+                  </g>
+                  <path class="scene__table-num" d="M121.199 85H117.283V77.9395C117.283 77.8092 117.283 77.5716 117.283 77.2266C117.283 76.875 117.286 76.4876 117.293 76.0645C117.306 75.6413 117.322 75.2604 117.342 74.9219C117.173 75.1237 117.013 75.2962 116.863 75.4395C116.72 75.5827 116.58 75.7161 116.443 75.8398L114.822 77.1777L112.82 74.7168L117.723 70.7227H121.199V85ZM134.734 77.8809C134.734 79.0267 134.643 80.0521 134.461 80.957C134.279 81.8555 133.986 82.6204 133.582 83.252C133.185 83.8835 132.658 84.3652 132 84.6973C131.342 85.0293 130.535 85.1953 129.578 85.1953C128.387 85.1953 127.41 84.9056 126.648 84.3262C125.887 83.7402 125.324 82.9036 124.959 81.8164C124.601 80.7227 124.422 79.4108 124.422 77.8809C124.422 76.3379 124.585 75.0195 124.91 73.9258C125.242 72.8255 125.786 71.9824 126.541 71.3965C127.296 70.8105 128.309 70.5176 129.578 70.5176C130.77 70.5176 131.743 70.8105 132.498 71.3965C133.26 71.9759 133.823 72.8158 134.188 73.916C134.552 75.0098 134.734 76.3314 134.734 77.8809ZM128.26 77.8809C128.26 78.8118 128.292 79.5931 128.357 80.2246C128.429 80.8561 128.559 81.3314 128.748 81.6504C128.943 81.9629 129.22 82.1191 129.578 82.1191C129.936 82.1191 130.21 81.9629 130.398 81.6504C130.587 81.3314 130.717 80.8594 130.789 80.2344C130.861 79.6029 130.896 78.8184 130.896 77.8809C130.896 76.9368 130.861 76.1491 130.789 75.5176C130.717 74.8861 130.587 74.4108 130.398 74.0918C130.21 73.7663 129.936 73.6035 129.578 73.6035C129.22 73.6035 128.943 73.7663 128.748 74.0918C128.559 74.4108 128.429 74.8861 128.357 75.5176C128.292 76.1491 128.26 76.9368 128.26 77.8809Z" fill="#1F1E1E" />
+                  <rect x="15" width="127" height="93" fill="transparent" />
+                </g>
+
+                <g class="scene__table">
+                  <g class="scene__table-group" stroke="#1F1E1E">
+                    <rect x="27.5" y="185.5" width="40" height="93" />
+                    <circle cx="12" cy="197" r="11.5" />
+                    <circle cx="83" cy="198" r="11.5" />
+                    <circle cx="12" cy="230" r="11.5" />
+                    <circle cx="83" cy="231" r="11.5" />
+                    <circle cx="12" cy="263" r="11.5" />
+                    <circle cx="83" cy="264" r="11.5" />
+                    <circle cx="48" cy="294" r="11.5" />
+                  </g>
+
+                  <path class="scene__table-num" d="M45.1992 241H41.2832V233.441C41.2832 232.523 41.3027 231.684 41.3418 230.922C41.1009 231.215 40.8014 231.521 40.4434 231.84L38.8223 233.178L36.8203 230.717L41.7227 226.723H45.1992V241ZM56.918 241H53.002V233.441C53.002 232.523 53.0215 231.684 53.0605 230.922C52.8197 231.215 52.5202 231.521 52.1621 231.84L50.541 233.178L48.5391 230.717L53.4414 226.723H56.918V241Z" fill="#1F1E1E" />
+
+                  <rect opacity="0.01" y="185" width="95" height="121" fill="transparent" />
+                </g>
+              </svg>
+
+            </div>
+          </div>
+          <!-- Схема столов -->
         </div>
         <div class="reserve__order">
-          Оформление заказа
+          <h4 class="reserve__section-title reserve__section-title--mb">Ваши пригласительные билеты</h4>
+          <div class="reserve__tickets-list">
+            <div class="reserve__tickets">
+              <div class="reserve__qty" data-caption=" шт." data-price="1400" data-currency=" ₽">9</div>
+              <div class="reserve__sum" data-currency=" ₽">12 600</div>
+            </div>
+            <div class="reserve__tickets">
+              <div class="reserve__qty" data-caption=" шт." data-price="1250" data-currency=" ₽">4</div>
+              <div class="reserve__sum" data-currency=" ₽">5000</div>
+            </div>
+          </div>
+          <div class="reserve__total" data-caption="Сумма" data-currency="₽">17 600</div>
+          <button type="submit" class="btn btn--red reserve__submit">Купить билеты</button>
         </div>
-        <div class="reserve__legend">
-          Легенда
+        <div class="reserve__legend reserve__legend--right">
+          <h4 class="reserve__section-title reserve__section-title--mb">Стоимость пригласительного билета</h4>
+          <div class="reserve__legend-list">
+            <div class="reserve__legends">
+              <div class="reserve__price" data-price="1400" data-currency="₽" data-person="1 персона"></div>
+            </div>
+            <div class="reserve__legends">
+              <div class="reserve__price reserve__price--black" data-price="1250" data-currency="₽" data-person="1 персона"></div>
+            </div>
+          </div>
+          <h5 class="reserve__section-title reserve__section-title--mb">Примечание</h5>
+          <div class="reserve__notes-list">
+            <p class="reserve__notes">доступные места</p>
+            <p class="reserve__notes reserve__notes--booked">забронировано</p>
+          </div>
         </div>
       </form>
     </article>
   </main>
-
-  <!DOCTYPE html>
-  <html lang="ru">
-
-  <body class="body">
-    <footer class="footer">
-      <div class="footer-block-with-lines">
-        <svg width="618" height="2" viewBox="0 0 618 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="618" height="2" fill="url(#paint0_linear_1745_3041)" />
-          <defs>
-            <linearGradient id="paint0_linear_1745_3041" x1="618" y1="2.87223e-05" x2="105.943" y2="-0.000432095" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#1C1B1B" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <svg width="618" height="2" viewBox="0 0 618 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="618" height="2" fill="url(#paint0_linear_1745_3042)" />
-          <defs>
-            <linearGradient id="paint0_linear_1745_3042" x1="0" y1="0" x2="618" y2="2.00052" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#1C1B1B" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      <div class="footer-block-1">
-        <nav class="footer-menu">
-          <a href="#" class="footer-link">Календарь мероприятий</a>
-          <a href="#" class="footer-link">Провести мероприятие</a>
-          <a href="#" class="footer-link">Стать арендатором</a>
-          <a href="#" class="footer-link">Наши проекты</a>
-          <a href="#" class="footer-link">Контакты</a>
+  <footer class="page-footer page-event">
+    <div class="page-footer__container">
+      <div class="page-footer__main">
+        <nav class="page-footer__nav">
+          <a href="#" class="page-footer__nav-link">Календарь мероприятий</a>
+          <a href="#" class="page-footer__nav-link">Провести мероприятие</a>
+          <a href="#" class="page-footer__nav-link">Стать арендатором</a>
+          <a href="#" class="page-footer__nav-link">Наши проекты</a>
+          <a href="#" class="page-footer__nav-link">Контакты</a>
         </nav>
-        <div class="footer-feedback">
-          <p>Подпишись и будь в курсе происходящего</p>
-          <div class="footer-block-with-input">
-            <input type="mail" placeholder="Email" class="footer-feedback-input" />
-            <button class="button-black">Подписаться</button>
+        <form method="post" class="page-footer__subscription subscription" id="js-subscribeForm" action="https://jsonplaceholder.typicode.com/posts">
+          <h5 class="subscription__title">Подпишись и будь в курсе происходящего</h5>
+          <div class="subscription__container">
+            <input type="email" class="subscription__email" placeholder="Email" id="js-subscribeEmail" required>
+            <button type="submit" class="subscription__btn btn subscription__btn--w135">Подписаться</button>
           </div>
-          <div class="footer-block-with-checkbox">
-            <input type="checkbox" id="feedback-checkbox" checked>
-            <label for="feedback-checkbox">
-              <span></span> Согласен на обработку персональных данных
-            </label>
-          </div>
-        </div>
+          <label class="subscription__agree check">
+            <input type="checkbox" name="agree" class="check__input" required>
+            <span class="check__mark"></span>
+            <span class="check__label check__label--fs14">Согласен на обработку персональных данных</span>
+          </label>
+        </form>
       </div>
-      <div class="footer-block-2">
-        <div class="footer-block-2-left">
-          <p>© Millennials 2022</p>
-          <div class="footer-block-with-links">
-            <a target="_blank" href="assets/documents/politikaconf.pdf">Политика конфиденциальности</a>
-            <a>Cookies</a>
+      <div class="page-footer__bottom-block">
+        <div class="page-footer__left-block">
+          <div class="page-footer__copyright">
+            © <a href="#" class="page-footer__copyright-link" rel="nofollow" target="_blank">Millennials</a> 2023
+          </div>
+          <div class="page-footer__terms">
+            <a href="#" class="page-footer__privacy">Политика конфиденциальности</a>
+            <a href="#" class="page-footer__cookies">Cookies</a>
           </div>
         </div>
-        <div class="footer-block-with-links">
-          <a href="https://www.instagram.com/" target="_blank" class="footer-social-link">
-            <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M29 58C45.0163 58 58 45.0163 58 29C58 12.9837 45.0163 0 29 0C12.9837 0 0 12.9837 0 29C0 45.0163 12.9837 58 29 58ZM25.4645 25.4645C26.4021 24.5268 27.6739 24 29 24C30.3261 24 31.5979 24.5268 32.5355 25.4645C33.4732 26.4021 34 27.6739 34 29C34 30.3261 33.4732 31.5979 32.5355 32.5355C31.5979 33.4732 30.3261 34 29 34C27.6739 34 26.4021 33.4732 25.4645 32.5355C24.5268 31.5979 24 30.3261 24 29C24 27.6739 24.5268 26.4021 25.4645 25.4645ZM26.7031 31.2958C27.3123 31.905 28.1385 32.2472 29 32.2472C29.8615 32.2472 30.6877 31.905 31.2969 31.2958C31.906 30.6866 32.2483 29.8604 32.2483 28.9989C32.2483 28.1374 31.906 27.3112 31.2969 26.702C30.6877 26.0929 29.8615 25.7506 29 25.7506C28.1385 25.7506 27.3123 26.0929 26.7031 26.702C26.094 27.3112 25.7517 28.1374 25.7517 28.9989C25.7517 29.8604 26.094 30.6866 26.7031 31.2958ZM34 25C34.5523 25 35 24.5523 35 24C35 23.4477 34.5523 23 34 23C33.4477 23 33 23.4477 33 24C33 24.5523 33.4477 25 34 25ZM37.3167 20.6767C37.8202 21.1793 38.2131 21.7813 38.4702 22.4442C38.7667 23.2307 38.9249 24.0624 38.9378 24.9026C39 25.9639 39 26.3076 39 29.0166C39 31.7257 38.9856 32.0639 38.9378 33.1306C38.9211 33.9601 38.7645 34.7784 38.4725 35.5547C38.215 36.2175 37.822 36.8195 37.3185 37.3222C36.815 37.8249 36.2121 38.2173 35.5482 38.4744C34.771 38.7651 33.9501 38.9222 33.1204 38.939C32.0597 39 31.7121 39 29 39C26.2879 39 25.9491 38.9856 24.8796 38.939C24.0482 38.9117 23.2275 38.743 22.4529 38.44C21.7888 38.1834 21.1857 37.7913 20.682 37.2887C20.1782 36.7862 19.7851 36.1843 19.5275 35.5214C19.2355 34.7441 19.0789 33.9257 19.0622 33.0963C19 32.035 19 31.6902 19 28.9823C19 26.2732 19.0144 25.935 19.0622 24.8683C19.0784 24.0397 19.2358 23.22 19.5275 22.4442C19.7843 21.7811 20.1771 21.179 20.6807 20.6763C21.1843 20.1737 21.7876 19.7818 22.4518 19.5256C23.2278 19.2335 24.0482 19.076 24.8774 19.0599C25.938 19 26.2857 19 28.9978 19C31.7099 19 32.0486 19.0133 33.1182 19.0599C33.948 19.0769 34.7689 19.2344 35.546 19.5256C36.21 19.7821 36.8131 20.1741 37.3167 20.6767ZM36.7721 34.886C36.9935 34.2864 37.1103 33.6533 37.1175 33.0142V33.0153H37.1297C37.1775 31.9552 37.1775 31.6647 37.1775 28.9634C37.1775 26.261 37.1653 25.965 37.1175 24.9104C37.1072 24.2785 36.9904 23.6529 36.7721 23.0597C36.6052 22.6284 36.3498 22.2367 36.0224 21.9098C35.695 21.5828 35.3027 21.3279 34.8707 21.1612C34.2769 20.9406 33.6495 20.824 33.016 20.8164C31.942 20.7554 31.6644 20.7554 28.9578 20.7554C26.2512 20.7554 25.9547 20.7687 24.8985 20.8164C24.2655 20.8252 23.6386 20.9418 23.0449 21.1612C22.1686 21.4961 21.4745 22.1847 21.1357 23.0597C20.9143 23.6589 20.7975 24.2917 20.7903 24.9304C20.7315 26.0049 20.7315 26.281 20.7315 28.9834C20.7315 31.6846 20.7426 31.9818 20.7903 33.0353C20.8007 33.6672 20.9174 34.2928 21.1357 34.886C21.3032 35.318 21.5597 35.7102 21.8886 36.037C22.2175 36.3638 22.6114 36.6181 23.0449 36.7833C23.6383 37.0038 24.2654 37.1205 24.8985 37.1282C25.9736 37.1892 26.2501 37.1892 28.9578 37.1892C31.6633 37.1892 31.9609 37.177 33.016 37.1282C33.6494 37.12 34.2768 37.0034 34.8707 36.7833C35.3027 36.617 35.695 36.3623 36.0225 36.0356C36.35 35.7088 36.6053 35.3172 36.7721 34.886Z" fill="#1F1E1E" />
+        <div class="page-footer__social social">
+          <a href="#" class="social__link" rel="nofollow" target="_blank">
+            <svg class="social__link-icon" width="21" height="24">
+              <use xlink:href="assets/icons/symbols.svg#instagram"></use>
             </svg>
           </a>
-          <a href="https://vk.com/" target="_blank" class="footer-social-link">
-            <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M58 29C58 45.0163 45.0163 58 29 58C12.9837 58 0 45.0163 0 29C0 12.9837 12.9837 0 29 0C45.0163 0 58 12.9837 58 29ZM22.7109 19C21.7279 19.0038 20.7862 19.396 20.0911 20.0911C19.396 20.7862 19.0038 21.7279 19 22.7109V35.2891C19.0038 36.2721 19.396 37.2138 20.0911 37.9089C20.7862 38.604 21.7279 38.9962 22.7109 39H35.2891C36.2721 38.9962 37.2138 38.604 37.9089 37.9089C38.604 37.2138 38.9962 36.2721 39 35.2891V22.7109C38.9962 21.7279 38.604 20.7862 37.9089 20.0911C37.2138 19.396 36.2721 19.0038 35.2891 19H22.7109ZM35.2891 20.8182C36.3436 20.8182 37.1818 21.6564 37.1818 22.7109V35.2891C37.1818 36.3436 36.3436 37.1818 35.2891 37.1818H22.7109C22.4619 37.1834 22.2151 37.1355 21.9847 37.0409C21.7544 36.9464 21.5451 36.807 21.3691 36.631C21.193 36.4549 21.0536 36.2456 20.9591 36.0153C20.8645 35.7849 20.8166 35.5381 20.8182 35.2891V22.7109C20.8182 21.6564 21.6564 20.8182 22.7109 20.8182H35.2891ZM34.3273 26C34.7248 26 34.8078 26.1723 34.7248 26.4063H34.7243C34.5578 27.0504 32.9578 28.9473 32.9578 28.9473C32.8188 29.1346 32.7633 29.2284 32.9578 29.4389C33.0266 29.5198 33.1729 29.6404 33.3403 29.7785C33.5126 29.9205 33.7071 30.0808 33.8623 30.2351C34.4258 30.7696 34.8508 31.22 34.9697 31.5303C35.0777 31.8423 34.8898 32 34.5148 32H33.2023C32.8503 32 32.6733 31.8342 32.2906 31.4757C32.1286 31.3238 31.9296 31.1374 31.6648 30.9144C30.8858 30.2823 30.5523 30.2 30.3573 30.2C30.0929 30.2 30.0139 30.263 30.0139 30.5789V31.5701C30.0139 31.8423 29.9109 32 29.0764 32C27.6849 32 26.1574 31.289 25.0725 29.9776C23.445 28.0571 23 26.6051 23 26.3129C23 26.1487 23.075 26 23.45 26H24.7635C25.099 26 25.225 26.1234 25.3495 26.4299C25.9919 28.0044 27.0744 29.3806 27.5194 29.3806C27.6864 29.3806 27.7629 29.3159 27.7629 28.9589V27.3311C27.7329 26.8679 27.5406 26.6675 27.3982 26.5191C27.3103 26.4275 27.2414 26.3557 27.2414 26.2541C27.2414 26.1303 27.3669 26 27.5754 26H29.6394C29.9174 26 30.0094 26.1251 30.0094 26.4063V28.5959C30.0094 28.8303 30.1349 28.9121 30.2183 28.9121C30.3853 28.9121 30.5243 28.8303 30.8303 28.5723C31.7758 27.6826 32.4433 26.3129 32.4433 26.3129C32.5268 26.1487 32.6808 26 33.0148 26H34.3273Z" fill="#1F1E1E" />
-            </svg>
-          </a>
-        </div>
-        <div class="footer-block-with-creator">
-          <p>Создание и продвижение</p>
-          <a href="https://tagree.ru/" target="_blank">
-            <svg width="57" height="17" viewBox="0 0 57 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.301 12.6947H4.10739C3.65537 12.6947 3.22994 12.6075 2.83111 12.4331C2.43227 12.2588 2.08661 12.0241 1.79413 11.729C1.50164 11.4205 1.26899 11.0651 1.09616 10.6627C0.923329 10.2604 0.836914 9.83116 0.836914 9.37515V0.603551L3.22994 0V3.8426H4.62588L5.22413 6.2568H3.22994V9.37515C3.22994 9.62998 3.31636 9.84458 3.48919 10.0189C3.66202 10.1933 3.86808 10.2805 4.10739 10.2805H5.70274L6.301 12.6947Z" fill="#1F1E1E" />
-              <path d="M16.6999 2.61538V12.6947H14.3069V7.66509C14.3069 6.86036 14.0277 6.17633 13.4693 5.61302C12.911 5.0497 12.2329 4.76805 11.4353 4.76805C11.0497 4.76805 10.6775 4.84181 10.3185 4.98935C9.97285 5.13688 9.66708 5.34477 9.40119 5.61302C8.84281 6.17633 8.56363 6.86036 8.56363 7.66509C8.56363 8.45641 8.84281 9.13373 9.40119 9.69704C9.66708 9.9787 9.97285 10.1933 10.3185 10.3408C10.6775 10.475 11.0497 10.542 11.4353 10.542C11.8341 10.542 12.1931 10.475 12.5121 10.3408L13.3696 12.4935C12.7581 12.802 12.0468 12.9562 11.2358 12.9562C10.5046 12.9562 9.82661 12.8221 9.20177 12.5538C8.59022 12.2722 8.05843 11.8899 7.60641 11.4071C7.1544 10.9243 6.80209 10.3609 6.54949 9.71716C6.2969 9.07337 6.1706 8.38935 6.1706 7.66509C6.1706 6.92742 6.2969 6.23669 6.54949 5.5929C6.80209 4.94911 7.1544 4.3858 7.60641 3.90296C8.05843 3.42012 8.59022 3.04458 9.20177 2.77633C9.82661 2.49467 10.5046 2.35385 11.2358 2.35385C11.8873 2.35385 12.4656 2.45444 12.9708 2.65562C13.476 2.8568 13.9214 3.11164 14.3069 3.42012V2.61538H16.6999Z" fill="#1F1E1E" />
-              <path d="M28.3262 11.6888C28.3262 12.413 28.1866 13.097 27.9074 13.7408C27.6415 14.3846 27.2693 14.9479 26.7907 15.4308C26.3121 15.9136 25.7537 16.2959 25.1156 16.5775C24.4774 16.8592 23.7928 17 23.0616 17C22.4633 17 21.8983 16.9061 21.3665 16.7183C20.8347 16.5306 20.3428 16.2623 19.8908 15.9136L21.6257 14.1834C22.0512 14.4517 22.5298 14.5858 23.0616 14.5858C23.8725 14.5858 24.5505 14.2974 25.0956 13.7207C25.654 13.1574 25.9332 12.4801 25.9332 11.6888V7.64497C25.9332 6.86706 25.654 6.18304 25.0956 5.5929C24.5373 5.02959 23.8592 4.74793 23.0616 4.74793C22.2905 4.74793 21.6124 5.02959 21.0275 5.5929C20.4691 6.18304 20.1899 6.86706 20.1899 7.64497C20.1899 8.4497 20.4691 9.13373 21.0275 9.69704C21.6124 10.2604 22.2905 10.542 23.0616 10.542C23.4604 10.542 23.8193 10.475 24.1384 10.3408L25.0358 12.5941C24.4375 12.8355 23.7928 12.9562 23.1014 12.9562H23.0616C22.3436 12.9562 21.6656 12.8221 21.0275 12.5538C20.3893 12.2722 19.831 11.8899 19.3524 11.4071C18.8738 10.9243 18.4949 10.3609 18.2157 9.71716C17.9365 9.07337 17.7969 8.38264 17.7969 7.64497C17.7969 6.9073 17.9165 6.21657 18.1558 5.57278C18.3951 4.92899 18.7275 4.36568 19.1529 3.88284C19.5917 3.4 20.1101 3.02446 20.7084 2.75621C21.32 2.47456 21.9847 2.33373 22.7026 2.33373C23.3939 2.33373 24.0055 2.44103 24.5373 2.65562C25.069 2.8568 25.5343 3.11164 25.9332 3.42012V2.6355H28.3262V11.6888Z" fill="#1F1E1E" />
-              <path d="M31.9206 3.4C32.2928 3.09152 32.7116 2.83669 33.1769 2.6355C33.6555 2.43432 34.194 2.33373 34.7922 2.33373V4.74793C33.9945 4.74793 33.3165 5.02959 32.7581 5.5929C32.1998 6.18304 31.9206 6.86706 31.9206 7.64497V12.6947H29.5276V7.64497V2.61538H31.9206V3.4Z" fill="#1F1E1E" />
-              <path d="M42.8505 8.87219H37.6257C37.7586 9.18067 37.9514 9.45562 38.204 9.69704C38.4832 9.9787 38.7956 10.1933 39.1413 10.3408C39.4869 10.475 39.8525 10.542 40.2381 10.542C40.7832 10.542 41.2684 10.4146 41.6938 10.1598L44.1866 11.1657C43.708 11.729 43.1297 12.1716 42.4516 12.4935C41.7736 12.802 41.0358 12.9562 40.2381 12.9562C39.5069 12.9562 38.8222 12.8221 38.1841 12.5538C37.5459 12.2722 36.9875 11.8899 36.5089 11.4071C36.0303 10.9243 35.6514 10.3609 35.3723 9.71716C35.1064 9.07337 34.9734 8.38935 34.9734 7.66509C34.9734 6.92742 35.1064 6.23669 35.3723 5.5929C35.6514 4.94911 36.0303 4.3858 36.5089 3.90296C36.9875 3.42012 37.5459 3.04458 38.1841 2.77633C38.8222 2.49467 39.5069 2.35385 40.2381 2.35385C40.9693 2.35385 41.654 2.49467 42.2921 2.77633C42.9302 3.04458 43.4886 3.42012 43.9672 3.90296C44.4458 4.3858 44.8181 4.94911 45.084 5.5929C45.3632 6.23669 45.5027 6.92742 45.5027 7.66509C45.5027 8.09428 45.4562 8.49665 45.3631 8.87219H42.8505ZM40.2381 4.76805C39.467 4.76805 38.789 5.0497 38.204 5.61302C37.9514 5.86785 37.7586 6.14951 37.6257 6.45799H42.8505C42.7175 6.14951 42.5248 5.86785 42.2722 5.61302C41.7138 5.0497 41.0358 4.76805 40.2381 4.76805Z" fill="#1F1E1E" />
-              <path d="M54.1846 8.87219H48.9599C49.0928 9.18067 49.2856 9.45562 49.5382 9.69704C49.8174 9.9787 50.1298 10.1933 50.4754 10.3408C50.8211 10.475 51.1867 10.542 51.5723 10.542C52.1173 10.542 52.6026 10.4146 53.028 10.1598L55.5207 11.1657C55.0421 11.729 54.4638 12.1716 53.7858 12.4935C53.1078 12.802 52.3699 12.9562 51.5723 12.9562C50.841 12.9562 50.1564 12.8221 49.5182 12.5538C48.8801 12.2722 48.3217 11.8899 47.8431 11.4071C47.3645 10.9243 46.9856 10.3609 46.7064 9.71716C46.4405 9.07337 46.3076 8.38935 46.3076 7.66509C46.3076 6.92742 46.4405 6.23669 46.7064 5.5929C46.9856 4.94911 47.3645 4.3858 47.8431 3.90296C48.3217 3.42012 48.8801 3.04458 49.5182 2.77633C50.1564 2.49467 50.841 2.35385 51.5723 2.35385C52.3035 2.35385 52.9881 2.49467 53.6263 2.77633C54.2644 3.04458 54.8228 3.42012 55.3014 3.90296C55.78 4.3858 56.1522 4.94911 56.4181 5.5929C56.6973 6.23669 56.8369 6.92742 56.8369 7.66509C56.8369 8.09428 56.7904 8.49665 56.6973 8.87219H54.1846ZM51.5723 4.76805C50.8012 4.76805 50.1231 5.0497 49.5382 5.61302C49.2856 5.86785 49.0928 6.14951 48.9599 6.45799H54.1846C54.0517 6.14951 53.8589 5.86785 53.6063 5.61302C53.048 5.0497 52.3699 4.76805 51.5723 4.76805Z" fill="#1F1E1E" />
+          <a href="#" class="social__link" rel="nofollow" target="_blank">
+            <svg class="social__link-icon" width="28" height="29">
+              <use xlink:href="assets/icons/symbols.svg#vk"></use>
             </svg>
           </a>
         </div>
+        <a href="https://tagree.ru/" class="page-footer__logo" rel="nofollow" target="_blank">
+          <span class="page-footer__logo-text">Создание и продвижение</span>
+          <svg class="page-footer__logo-icon" width="58" height="17">
+            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+          </svg>
+        </a>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
 
-  </html>
-
+  <script src="./scripts/jquery-3.6.0.min.js"></script>
+  <script src="./scripts/jquery.validate.js"></script>
+  <script src="./scripts/jquery.validate-init.js"></script>
+  <script src="./scripts/main.js"></script>
 </body>
 
 </html>

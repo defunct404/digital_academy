@@ -1,0 +1,45 @@
+.arrow {
+    &__icon {
+        display: block;
+        width: auto;
+        height: 61px;
+
+        @media @bw1340 {
+            width: 68px;
+            height: 43px;
+        }
+
+        @media @bw768 {
+            width: 62px;
+        }
+    }
+
+    &:disabled {
+        fill: @gray_dark;
+        pointer-events: none;
+    }
+
+    &,
+    &--left {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        transition: color 0.2s;
+
+        &:hover {
+            @media (hover: hover) {
+                cursor: pointer;
+                color: @red_dark;
+            }
+        }
+
+        &:active {
+            cursor: pointer;
+            color: @red_dark;
+        }
+    }
+
+    &--left {
+        transform: rotate(180deg);
+    }
+}

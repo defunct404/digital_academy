@@ -1,0 +1,45 @@
+.more-events {
+    z-index: 20;
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        max-width: 128px;
+        min-height: 132px;
+        margin: 0 auto;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        @media @bw1340 {
+            max-width: 99px;
+            min-height: 106px;
+            font-size: 0.875rem;
+        }
+
+        &:hover {
+            @media (hover: hover) {
+                color: @red_dark;
+                cursor: pointer;
+            }
+        }
+
+        &:active {
+            color: @red_dark;
+            cursor: pointer;
+        }
+    }
+
+    &__arrow {
+        align-self: center;
+        width: 92px;
+        height: 63px;
+        margin-top: 36px;
+        transform: rotate(90deg);
+
+        @media @bw1340 {
+            margin-top: 32px;
+        }
+    }
+}
